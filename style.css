@@ -11663,3 +11663,25 @@ table.table td:first-child {
 .burger-icon:focus {
   fill: #8e8d8a;
 } */
+
+.storyScroller__line {
+  font-family: "Montserrat", serif;
+  font-size: 32px;
+  line-height: 118%;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .storyScroller__line {
+  font-size: 64px;
+  }
+}
+@media (min-width: 1280px) {
+  .storyScroller__line {
+  font-size: 80px;
+  }
+}
+
+
+
