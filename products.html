@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OkrasaBrand - products</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/76cad44852ba93f820a16d446f80c5e2?family=GT+America+Light"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="bg--cotton">
+    <div id="menu">
+      <div
+        id="menu__bar"
+        class="color--cotton bg--black flex flex-row md:flex-col justify-between items-center md:pb3"
+      >
+        <a href="/" class="hidden md:block"
+          ><img
+            src="./img/white-dove.svg"
+            alt="Окраса"
+            class="w-full h-auto"
+            width="161"
+            height="156"
+        /></a>
+        <div class="cursor-pointer menu__toggle" onclick="window.menuToggle();">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="27.5303"
+              y1="4.53033"
+              x2="4.90291"
+              y2="27.1577"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></line>
+            <line
+              x1="27.5303"
+              y1="4.53033"
+              x2="4.90291"
+              y2="27.1577"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></line>
+            <line
+              x1="27.4697"
+              y1="27.5303"
+              x2="4.84225"
+              y2="4.90291"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></line>
+          </svg>
+          <!-- <svg class="burger-icon" width="32" height="32">
+            <use href="./img/icons.svg#icon-menu-hamburger"></use>
+          </svg> -->
+        </div>
+        <a href="/" class="md:hidden"
+          ><img
+            src="./img/white-dove.svg"
+            alt="Окраса"
+            id="menu__mobileLogo"
+            class="text-center"
+            width="389"
+            height="124"
+            style="height: 32px; width: auto"
+        /></a>
+        <a
+          href="/cart"
+          id="menu__cartButton"
+          class="relative bg--cotton color--black flex items-center justify-center"
+        >
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Cart</title>
+            <path
+              d="M1.86644 11.2C2.3819 11.2 2.79977 10.7822 2.79977 10.2667C2.79977 9.75124 2.3819 9.33337 1.86644 9.33337C1.35097 9.33337 0.933105 9.75124 0.933105 10.2667C0.933105 10.7822 1.35097 11.2 1.86644 11.2Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M9.33324 11.2C9.8487 11.2 10.2666 10.7822 10.2666 10.2667C10.2666 9.75124 9.8487 9.33337 9.33324 9.33337C8.81777 9.33337 8.3999 9.75124 8.3999 10.2667C8.3999 10.7822 8.81777 11.2 9.33324 11.2Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M10.7334 7.46683H1.22183L1.6885 6.5335H8.86677C8.95997 6.53348 9.05102 6.50555 9.12821 6.45332C9.20539 6.40109 9.26517 6.32694 9.29984 6.24043L11.1665 1.57376C11.1949 1.50296 11.2055 1.42628 11.1973 1.35043C11.1892 1.27459 11.1626 1.20189 11.1199 1.13871C11.0771 1.07552 11.0196 1.02378 10.9522 0.988005C10.8848 0.952229 10.8097 0.933514 10.7334 0.933496H1.5933L0.797168 0.136429C0.709541 0.0488014 0.590692 -0.000427246 0.466768 -0.000427246C0.342844 -0.000427246 0.223995 0.0488014 0.136368 0.136429C0.0487404 0.224057 -0.000488281 0.342905 -0.000488281 0.466829C-0.000488281 0.590753 0.0487404 0.709602 0.136368 0.797229L0.933435 1.59336V5.9567L0.0495679 7.72443C0.0139161 7.79558 -0.00294925 7.87466 0.000574618 7.95416C0.00409849 8.03367 0.0278945 8.11095 0.0697012 8.17866C0.111508 8.24637 0.169936 8.30227 0.239434 8.34104C0.308931 8.37981 0.387188 8.40016 0.466768 8.40017H10.7334C10.8572 8.40017 10.9759 8.351 11.0634 8.26348C11.1509 8.17597 11.2001 8.05727 11.2001 7.9335C11.2001 7.80973 11.1509 7.69103 11.0634 7.60352C10.9759 7.516 10.8572 7.46683 10.7334 7.46683Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+
+          <!-- <div id="menu__cartIndicator" class="bg--sunset2 absolute"></div> -->
+        </a>
+      </div>
+
+      <nav
+        id="menu__content"
+        class="color--cotton bg--black h-full flex flex-col lg:justify-between scroll-y"
+      >
+        <ul class="font-menu-lg" style="flex-grow: 4">
+          <li class="mb3"><a href="products.html">Магазин</a></li>
+          <li class="mb3"><a href="/about">Про нас</a></li>
+          <li class="mb3"><a href="/gallery">Галерея</a></li>
+        </ul>
+        <ul class="font-menu-sm mt5 mb5" style="flex-grow: 1">
+          <li class="mb3"><a href="/production">How it's made</a></li>
+          <li class="mb3">
+            <a href="/shipping-and-returns">Доставка і повернення</a>
+          </li>
+          <li class="mb3">
+            <a href="/common-questions">Загальні питання</a>
+          </li>
+
+          <li class="mb3">
+            <a href="/contact" class="flex items-center nav__link"
+              ><span>Контакти</span></a
+            >
+          </li>
+        </ul>
+        <footer>
+          <div class="mb3 flex">
+            <a
+              href="https://instagram.com/okrasa.brand"
+              target="_blank"
+              class="mr3"
+              ><svg class="footer-icon" width="22" height="22">
+                <use href="./img/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="font-body-sm font-weight-lt">
+            Copyright © 2023 Okrasa brand. All rights reserved.
+          </p>
+        </footer>
+      </nav>
+    </div>
+    <div
+      class="featuredProductTags hidden lg:inline-flex flex-row"
+      onmouseleave="window.__featuredProductHoverTimeout = setTimeout(() => { this.classList.remove('featuredProductTags--open'); }, 1000);"
+      style="opacity: 1; transition: opacity 1s ease 0s"
+    >
+      <button
+        aria-label="product menu"
+        class="button button--smallRound featuredProductTags__toggle flex items-center font-cta-sm"
+        onmouseenter="clearTimeout(window.__featuredProductHoverTimeout); this.parentElement.classList.add('featuredProductTags--open');"
+      >
+        <svg
+          width="19"
+          height="3"
+          viewBox="0 0 19 3"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="9.5" cy="1.5" r="1.5" fill="currentColor"></circle>
+          <circle cx="17.5" cy="1.5" r="1.5" fill="currentColor"></circle>
+          <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"></circle>
+        </svg>
+      </button>
+
+      <div class="featuredProductTags__tags flex flex-row">
+        <a
+          href="/products/earrings"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Сережки</a
+        >
+        <a
+          href="/products/necklaces"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Намисто</a
+        >
+        <a
+          href="/products/bracelets"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Браслет</a
+        >
+        <!-- <a
+          href="/products/rings"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Кільця</a
+        > -->
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+      (function () {
+        let observer;
+        document.addEventListener("pjax:success", function () {
+          const hero = document.querySelector(".homeHero");
+          if (!hero) return;
+
+          const tags = document.querySelector(".featuredProductTags");
+          if (observer) observer.disconnect();
+          observer = new IntersectionObserver(function (entries) {
+            for (const entry of entries) {
+              tags.classList.toggle(
+                "featuredProductTags--forceOpen",
+                entry.isIntersecting
+              );
+            }
+          });
+
+          observer.observe(hero);
+        });
+      })();
+    </script>
+
+    <script>
+      "use strict";
+      (function () {
+        let observer;
+        document.addEventListener("pjax:success", function () {
+          const hero = document.querySelector(".homeHero");
+          if (!hero) return;
+
+          const tags = document.querySelector(".featuredProductTags");
+          if (observer) observer.disconnect();
+          observer = new IntersectionObserver(function (entries) {
+            for (const entry of entries) {
+              tags.classList.toggle(
+                "featuredProductTags--forceOpen",
+                entry.isIntersecting
+              );
+            }
+          });
+
+          observer.observe(hero);
+        });
+      })();
+    </script>
+
+    <div id="body__contentWrapper">
+      <div id="body__content">
+        <main>
+          <script>
+            "use strict";
+            (function () {
+              document.addEventListener(
+                "pjax:success",
+                function () {
+                  const hoverText = document.querySelector(
+                    ".productLinkHoverText"
+                  );
+                  const onMouseMove = function (event) {
+                    hoverText.style.top = `${event.pageY}px`;
+                    if (
+                      event.pageX + hoverText.clientWidth >
+                      window.innerWidth
+                    ) {
+                      hoverText.classList.add("productLinkHoverText--reverse");
+                      hoverText.style.right = `${
+                        window.innerWidth - event.pageX
+                      }px`;
+                      hoverText.style.left = "unset";
+                    } else {
+                      hoverText.classList.remove(
+                        "productLinkHoverText--reverse"
+                      );
+                      hoverText.style.left = `${event.pageX}px`;
+                      hoverText.style.right = "unset";
+                    }
+                  };
+
+                  window.addEventListener("mousemove", onMouseMove);
+                  let hoverTransition;
+                  document.querySelectorAll(".productLink").forEach((el) => {
+                    el.addEventListener("mouseenter", function (event) {
+                      clearTimeout(hoverTransition);
+                      hoverText.style.opacity = 1;
+                      hoverText.style.display = "flex";
+                    });
+                    el.addEventListener("mouseleave", function (event) {
+                      hoverText.style.opacity = 0;
+                      hoverTransition = setTimeout(function () {
+                        hoverText.style.display = "none";
+                      }, 200);
+                    });
+                  });
+
+                  document.addEventListener(
+                    "pjax:send",
+                    function () {
+                      window.removeEventListener("mousemove", onMouseMove);
+                    },
+                    { once: true }
+                  );
+                },
+                { once: true }
+              );
+            })();
+          </script>
+
+          <div class="content contentgrid mt7 lg:mt9">
+            <header
+              class="animation-container col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-2 lg:col-span-6 mb6"
+            >
+              <h1 class="h3 mb6" data-animate="slide-up delay-1">
+                Sleep Well.
+              </h1>
+              <div
+                class="font-body-lg font-weight-lt"
+                data-animate="slide-up delay-2"
+              >
+                <div class="richtext">
+                  <p>
+                    Your bed should make you feel really, really good. Not just
+                    when you fall asleep, but when you wake up.
+                  </p>
+                  <p>
+                    Earthfoam Mattresses are made of natural rubber, wool, and
+                    cotton: chosen for their quality, collected ethically, and
+                    assembled with care in our own factory outside Chicago.
+                  </p>
+                </div>
+              </div>
+            </header>
+
+            <section
+              class="animation-container productIndex__products col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-10 lg:col-span-14"
+            >
+              <a
+                href="/products/mattress"
+                class="productIndex__product flex flex-col mb6 lg:mb8"
+                data-animate="slide-up delay-1 md:delay-2"
+                data-product-id="6764572737614"
+                data-variant-id="39875784474702"
+              >
+                <div
+                  class="productLink relative overflow-h w-full"
+                  style="aspect-ratio: 1"
+                >
+                  <img
+                    class="w-contained w-full h-full fit--cover rounded"
+                    src="/img/Home_Product_Matterss_Default_640x.jpg"
+                    width="640"
+                    height="360"
+                    alt="Wide shot of the mattress with a sheet draped over it"
+                    style="object-position: 77.890625% 49.13194444444444%"
+                    srcset="
+                      /img/Home_Product_Matterss_Default_1280x.jpg 1280w,
+                      /img/Home_Product_Matterss_Default_640x.jpg   640w
+                    "
+                    sizes="(min-width: 768px) 50vw,
+					100vw"
+                  />
+                  <img
+                    class="w-contained w-full h-full fit--cover rounded"
+                    src="/img/RES_211103_SG_Earthfoam_Shot08_Talent_Group_00271_3274SG_B_ADOBERGB_640x.jpg"
+                    width="640"
+                    height="427"
+                    alt="Two women sitting on edge of bed"
+                    style="object-position: 47.890625% 45.242002250439114%"
+                    srcset="
+                      /img/RES_211103_SG_Earthfoam_Shot08_Talent_Group_00271_3274SG_B_ADOBERGB_1280x.jpg 1280w,
+                      /img/RES_211103_SG_Earthfoam_Shot08_Talent_Group_00271_3274SG_B_ADOBERGB_640x.jpg   640w
+                    "
+                    sizes="(min-width: 768px) 50vw,
+					100vw"
+                  />
+                </div>
+                <div
+                  class="flex flex-row justify-between items-center bb1--gray3 pt3 pb3"
+                >
+                  <h2 class="h7">Mattress</h2>
+                  <span class="eyebrow-sm">From $699</span>
+                </div>
+                <div class="grow flex flex-row items-center bb1--gray3 pt3 pb3">
+                  <p class="font-body-md font-weight-lt mr2">
+                    Springy, supportive natural rubber sandwiched between
+                    breathable New Zealand wool and soft quilted&nbsp;cotton.
+                  </p>
+                  <span style="flex-shrink: 0"
+                    ><svg
+                      width="15"
+                      height="12"
+                      viewBox="0 0 15 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+              <a
+                href="/products/mattress-topper"
+                class="productIndex__product flex flex-col mb6 lg:mb8"
+                data-animate="slide-up delay-2 md:delay-3"
+                data-product-id="6764572901454"
+                data-variant-id="39875785261134"
+              >
+                <div
+                  class="productLink relative overflow-h w-full"
+                  style="aspect-ratio: 1"
+                >
+                  <img
+                    class="w-contained w-full h-full fit--cover rounded"
+                    src="/img/Home_Product_Topper_Default_640x.jpg"
+                    width="640"
+                    height="360"
+                    alt="Full view of mattress and topper"
+                    style="
+                      object-position: 52.42187499999999% 64.96527777777777%;
+                    "
+                    srcset="
+                      /img/Home_Product_Topper_Default_1280x.jpg 1280w,
+                      /img/Home_Product_Topper_Default_640x.jpg   640w
+                    "
+                    sizes="(min-width: 768px) 50vw,
+					100vw"
+                  />
+                  <img
+                    class="w-contained w-full h-full fit--cover rounded"
+                    src="/img/Home_Product_Topper_Hover_640x.jpg"
+                    width="640"
+                    height="360"
+                    alt="Medium shot of the mattress topper on top of the mattress"
+                    style="object-position: 24.921875% 50.798611111111114%"
+                    srcset="
+                      /img/Home_Product_Topper_Hover_1280x.jpg 1280w,
+                      /img/Home_Product_Topper_Hover_640x.jpg   640w
+                    "
+                    sizes="(min-width: 768px) 50vw,
+					100vw"
+                  />
+                </div>
+                <div
+                  class="flex flex-row justify-between items-center bb1--gray3 pt3 pb3"
+                >
+                  <h2 class="h7">Mattress Topper</h2>
+                  <span class="eyebrow-sm">From $299</span>
+                </div>
+                <div class="grow flex flex-row items-center bb1--gray3 pt3 pb3">
+                  <p class="font-body-md font-weight-lt mr2">
+                    A squishy layer of natural rubber to make a firm
+                    mattress&nbsp;softer.
+                  </p>
+                  <span style="flex-shrink: 0"
+                    ><svg
+                      width="15"
+                      height="12"
+                      viewBox="0 0 15 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+              <a
+                href="/products/pillow"
+                class="productIndex__product flex flex-col mb6 lg:mb8"
+                data-animate="slide-up delay-3 md:delay-4"
+                data-product-id="6764574179406"
+                data-variant-id="40098672607310"
+              >
+                <div
+                  class="productLink relative overflow-h w-full"
+                  style="aspect-ratio: 1"
+                >
+                  <img
+                    class="w-contained w-full h-full fit--cover rounded"
+                    src="/img/Home_Product_Pillow_Default_640x.jpg"
+                    width="640"
+                    height="360"
+                    alt="Earthfoam pillow rests on mattress."
+                    style="object-position: 43.046875% 39.6875%"
+                    srcset="
+                      /img/Home_Product_Pillow_Default_1280x.jpg 1280w,
+                      /img/Home_Product_Pillow_Default_640x.jpg   640w
+                    "
+                    sizes="(min-width: 768px) 50vw,
+					100vw"
+                  />
+                  <img
+                    class="w-contained w-full h-full fit--cover rounded"
+                    src="/img/Home_Product_Pillow_Hover_640x.jpg"
+                    width="640"
+                    height="360"
+                    alt="Woman with head lying on the pillow"
+                    style="object-position: 17.265625% 57.1875%"
+                    srcset="
+                      /img/Home_Product_Pillow_Hover_1280x.jpg 1280w,
+                      /img/Home_Product_Pillow_Hover_640x.jpg   640w
+                    "
+                    sizes="(min-width: 768px) 50vw,
+					100vw"
+                  />
+                </div>
+                <div
+                  class="flex flex-row justify-between items-center bb1--gray3 pt3 pb3"
+                >
+                  <h2 class="h7">Pillow</h2>
+                  <span class="eyebrow-sm">From $99</span>
+                </div>
+                <div class="grow flex flex-row items-center bb1--gray3 pt3 pb3">
+                  <p class="font-body-md font-weight-lt mr2">
+                    A smaller bed for your&nbsp;head.
+                  </p>
+                  <span style="flex-shrink: 0"
+                    ><svg
+                      width="15"
+                      height="12"
+                      viewBox="0 0 15 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+              <a
+                href="/products/morning-tea"
+                class="productIndex__product flex flex-col mb6 lg:mb8"
+                data-animate="slide-up delay-4 md:delay-5"
+                data-product-id="6850936602702"
+                data-variant-id="40162398634062"
+              >
+                <div
+                  class="productLink relative overflow-h w-full"
+                  style="aspect-ratio: 1"
+                >
+                  <img
+                    class="w-contained w-full h-full fit--cover rounded"
+                    src="/img/EF_MPTS_CAROUSEL_02_640x.jpg"
+                    width="541"
+                    height="640"
+                    alt=""
+                    style="object-position: 50% 50%"
+                    srcset="
+                      /img/EF_MPTS_CAROUSEL_02_1280x.jpg 1280w,
+                      /img/EF_MPTS_CAROUSEL_02_640x.jpg   640w
+                    "
+                    sizes="(min-width: 768px) 50vw,
+					100vw"
+                  />
+                  <img
+                    class="w-contained w-full h-full fit--cover rounded"
+                    src="/img/EF_MPTS_CAROUSEL_01_640x.jpg"
+                    width="541"
+                    height="640"
+                    alt=""
+                    style="object-position: 50% 50%"
+                    srcset="
+                      /img/EF_MPTS_CAROUSEL_01_1280x.jpg 1280w,
+                      /img/EF_MPTS_CAROUSEL_01_640x.jpg   640w
+                    "
+                    sizes="(min-width: 768px) 50vw,
+					100vw"
+                  />
+                </div>
+                <div
+                  class="flex flex-row justify-between items-center bb1--gray3 pt3 pb3"
+                >
+                  <h2 class="h7">Morning Person Tea Set</h2>
+                  <span class="eyebrow-sm">$29</span>
+                </div>
+                <div class="grow flex flex-row items-center bb1--gray3 pt3 pb3">
+                  <p class="font-body-md font-weight-lt mr2">
+                    Perfect for waking up after a great night’s&nbsp;sleep.
+                  </p>
+                  <span style="flex-shrink: 0"
+                    ><svg
+                      width="15"
+                      height="12"
+                      viewBox="0 0 15 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </section>
+          </div>
+
+          <script>
+            document.addEventListener(
+              "tracking:pageInit",
+              function () {
+                try {
+                  const product_ids = [];
+                  document
+                    .querySelectorAll(".productIndex__product")
+                    .forEach(function (el) {
+                      product_ids.push({
+                        product: parseInt(el.dataset.productId),
+                        variant: parseInt(el.dataset.variantId),
+                      });
+                    });
+                  const impressions = product_ids.map(function (ids, i) {
+                    return track__buildImpression(
+                      ids.product.toString(),
+                      ids.variant.toString(),
+                      i + 1,
+                      undefined,
+                      window.location.pathname
+                    );
+                  });
+                  track_collectionView(impressions);
+                } catch (e) {
+                  console.error(e);
+                }
+              },
+              { once: true }
+            );
+
+            document.addEventListener(
+              "pjax:success",
+              function () {
+                try {
+                  document
+                    .querySelectorAll(".productIndex__product")
+                    .forEach(function (el, i) {
+                      const p_id = parseInt(el.dataset.productId);
+                      const v_id = parseInt(el.dataset.variantId);
+                      el.addEventListener("click", function (e) {
+                        const prod = track__buildProduct(
+                          p_id.toString(),
+                          v_id.toString(),
+                          undefined,
+                          i
+                        );
+                        track_productClick(prod);
+                      });
+                    });
+                } catch (e) {
+                  console.error(e);
+                }
+              },
+              { once: true }
+            );
+          </script>
+
+          <div class="productLinkHoverText eyebrow-sm absolute">
+            View Product
+          </div>
+        </main>
+        <footer>
+          <a href="/shipping-and-returns">
+            <div
+              class="marquee marquee--linked block overflow-h color--white bg--black bb1--gray1"
+            >
+              <div
+                class="marquee__container inline-block whitespace-nowrap"
+                style="animation-duration: 17s"
+              >
+                <span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Доставка Новою Поштою або Укрпоштою</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Накладений платіж</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >У Києві можлива доставка кур'єром</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Гарантія повернення коштів</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Доставка Новою Поштою або Укрпоштою</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Накладений платіж</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >У Києві можлива доставка кур'єром</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Гарантія повернення коштів</span
+                >
+              </div>
+            </div>
+          </a>
+          <div class="bg--black color--white pt5 pb5">
+            <div class="relative content contentgrid">
+              <div
+                class="footerGrid col-start-1 col-span-12 md:col-start-2 md:col-span-22"
+              >
+                <div class="footerGrid__emailForm mb8 lg:mb0">
+                  <h2 class="font-body-lg mb4">
+                    Підписатися на новини та персональні пропозиції
+                  </h2>
+                  <script>
+                    function handleNewsletterSubmit(event) {
+                      event.preventDefault();
+                      const input = event.target.querySelector(
+                        'input[type="email"]'
+                      );
+                      const group =
+                        event.target.querySelector('input[name="g"]');
+                      const button = event.target.querySelector("button");
+                      const submit = button.querySelector(
+                        ".newsletter__submit"
+                      );
+                      const processing = button.querySelector(
+                        ".newsletter__processing"
+                      );
+                      const success = button.querySelector(
+                        ".newsletter__success"
+                      );
+
+                      function onError() {
+                        alert(
+                          "There was an error with your signup. Please try again later."
+                        );
+                        input.disabled = false;
+                        button.disabled = false;
+                        processing.classList.add("hidden");
+                        submit.classList.remove("hidden");
+                      }
+
+                      input.disabled = true;
+                      button.disabled = true;
+                      submit.classList.add("hidden");
+                      processing.classList.remove("hidden");
+
+                      // --- Tracking --- //
+                      window.dataLayer.push({
+                        event: "emailSubmit",
+                        email: input.value,
+                        group: group.value,
+                        timezoneOffset: new Date().getTimezoneOffset(),
+                      });
+                      // --- Tracking --- //
+
+                      fetch(event.target.dataset.ajaxAction, {
+                        method: "POST",
+                        headers: {
+                          "Access-Control-Allow-Headers": "*",
+                          "Content-Type":
+                            "application/x-www-form-urlencoded; charset=utf-8",
+                        },
+                        body: new URLSearchParams({
+                          email: input.value,
+                          g: group.value,
+                          $timezone_offset: new Date().getTimezoneOffset(),
+                        }),
+                        cache: "no-store",
+                      })
+                        .then(function (resp) {
+                          if (!resp.ok) throw new Error(resp);
+                          return resp.json();
+                        })
+                        .then(function (resp) {
+                          if (!resp.success) throw new Error(resp);
+
+                          processing.classList.add("hidden");
+                          success.classList.remove("hidden");
+                          button.classList.remove("opacity--disabled");
+                        })
+                        .catch(function (e) {
+                          onError();
+                        });
+                    }
+                  </script>
+                  <form
+                    class="flex flex-row color--white font-body-lg"
+                    method="GET"
+                    action="https://manage.kmail-lists.com/subscriptions/subscribe"
+                    data-ajax-action="https://manage.kmail-lists.com/ajax/subscriptions/subscribe"
+                    onsubmit="handleNewsletterSubmit(event);"
+                  >
+                    <input type="hidden" name="g" value="RePdxG" />
+                    <input
+                      class="grow p2 opacity--disabled"
+                      type="email"
+                      placeholder="Email address"
+                      name="email"
+                      autocomplete="off"
+                    />
+                    <button
+                      aria-label="submit"
+                      class="p2 cursor-pointer color--white flex items-center justify-center opacity--disabled"
+                    >
+                      <span class="newsletter__submit"
+                        ><svg
+                          width="15"
+                          height="12"
+                          viewBox="0 0 15 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="newsletter__processing hidden"
+                        ><svg
+                          width="19"
+                          height="3"
+                          viewBox="0 0 19 3"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="9.5"
+                            cy="1.5"
+                            r="1.5"
+                            fill="currentColor"
+                          ></circle>
+                          <circle
+                            cx="17.5"
+                            cy="1.5"
+                            r="1.5"
+                            fill="currentColor"
+                          ></circle>
+                          <circle
+                            cx="1.5"
+                            cy="1.5"
+                            r="1.5"
+                            fill="currentColor"
+                          ></circle>
+                        </svg>
+                      </span>
+                      <span class="newsletter__success hidden"
+                        ><svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.34615 8.5L5.84627 13L15.0001 4"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+                </div>
+                <nav class="footerGrid__nav mb8 lg:mb0">
+                  <a class="mb3 md:mb0 lg:mr3" href="/products">Магазин</a>
+                  <a class="mb3 md:mb0 lg:mr3" href="/about">Про нас</a>
+                  <a class="mb3 md:mb0 lg:mr3" href="/gallery">Галерея</a>
+                  <a class="mb3 md:mb0 lg:mr3" href="/shipping-and-returns"
+                    >Доставка і повернення</a
+                  >
+                  <a
+                    class="mb3 md:mb0 lg:mr3 footerNav__link flex items-center"
+                    href="/contact"
+                    ><span>Контакти</span></a
+                  >
+                  <a class="mb3 md:mb0 lg:mr3" href="/privacy-policy"
+                    >Конфіденційнійсть</a
+                  >
+                  <a class="mb3 md:mb0 lg:mr3" href="/terms-of-service"
+                    >Умови користування</a
+                  >
+                </nav>
+
+                <div class="footerGrid__social mb5 flex flex-col mb8 lg:mb0">
+                  <div class="flex flex-row mb4">
+                    <a
+                      class="mr3"
+                      href="https://instagram.com/okrasa.brand"
+                      target="_blank"
+                    >
+                      <svg class="footer-icon" width="22" height="22">
+                        <use href="./img/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="font-body-sm">
+                    <p style="margin-bottom: 5px">
+                      Copyright © 2023 Okrasa brand
+                    </p>
+                    <p>All Rights Reserved.</p>
+                  </div>
+                </div>
+
+                <div
+                  class="footerGrid__sinhala overflow-h flex flex-col md:flex-row justify-between relative"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div id="bodyTail">
+      <div
+        id="lightbox"
+        class="modal flex items-center justify-center fixed t0 l0 r0 b0"
+        style="display: none"
+      >
+        <div class="modal__background absolute t0 l0 r0 b0"></div>
+        <div class="modal__content brad--1 bg--white relative flex flex-col">
+          <header class="p2 tr">
+            <button class="cursor-pointer color--black" aria-label="Close">
+              &times;
+            </button>
+          </header>
+          <div
+            class="scroll-y modal__body"
+            data-img-class="w-contained h-contained h-auto fit--contain p2 mb2"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" defer src="./js/main.js"></script>
+    <script type="module" defer src="./js/pjax@2.4.0.min.js"></script>
+    <script type="module" defer src="./js/storefront.js"></script>
+  </body>
+</html>
