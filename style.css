@@ -26,7 +26,7 @@ html,
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #141617;
   font-weight: 400;
   font-size: 16px;
@@ -560,7 +560,7 @@ svg {
 }
 
 .h1 {
-  font-family: "SangBleu Sunrise", serif;
+  font-family: "Montserrat", serif;
   font-size: 40px;
   line-height: 100%;
   letter-spacing: -0.02em;
@@ -574,7 +574,7 @@ svg {
 }
 
 .h2 {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
   line-height: 112%;
   letter-spacing: -0.02em;
@@ -588,7 +588,7 @@ svg {
 }
 
 .h3 {
-  font-family: "SangBleu Sunrise", serif;
+  font-family: "Montserrat", serif;
   font-size: 32px;
   line-height: 118%;
   letter-spacing: -0.02em;
@@ -602,7 +602,7 @@ svg {
 }
 
 .h4 {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 28px;
   line-height: 132%;
   letter-spacing: -0.02em;
@@ -618,7 +618,7 @@ svg {
 
 .h5,
 .blogPost .richtext blockquote {
-  font-family: "SangBleu Sunrise", serif;
+  font-family: "Montserrat", serif;
   font-size: 24px;
   line-height: 150%;
   letter-spacing: -0.025em;
@@ -637,7 +637,7 @@ svg {
 .helpPage__description .richtext h2,
 .helpPage main h2,
 .blogPost .richtext h2 {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   line-height: 124%;
   letter-spacing: -0.02em;
@@ -655,7 +655,7 @@ svg {
 }
 
 .h7 {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   line-height: 124%;
   letter-spacing: -0.02em;
@@ -678,14 +678,14 @@ svg {
 .review__policyModal .richtext h1,
 .review__customerName,
 .blogPost .richtext {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 150%;
   font-weight: 400;
 }
 
 .font-body-md {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 150%;
   font-weight: 400;
@@ -695,14 +695,14 @@ svg {
 .textDetailImageGrid__imageCaption,
 .fullBleedImage__captionBody,
 .fullBleedImage__caption {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   line-height: 150%;
   font-weight: 400;
 }
 
 .eyebrow-sm {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1em;
   font-size: 10px;
   line-height: 110%;
@@ -711,7 +711,7 @@ svg {
 }
 
 .font-cta-lg {
-  font-family: "SangBleu Sunrise", serif;
+  font-family: "Montserrat", serif;
   letter-spacing: -0.03em;
   line-height: 100%;
   font-size: 16px;
@@ -719,7 +719,7 @@ svg {
 }
 
 .font-cta-sm {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 100%;
   font-weight: 400;
@@ -727,7 +727,7 @@ svg {
 }
 
 .font-menu-lg {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 56px;
   font-weight: 400;
   line-height: 100%;
@@ -741,7 +741,7 @@ svg {
 }
 
 .font-menu-sm {
-  font-family: "GT America", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
@@ -754,27 +754,27 @@ svg {
   }
 }
 
-/* SangBleu Sunrise Regular */
+/* Montserrat Regular */
 @font-face {
-  font-family: 'SangBleu Sunrise';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local(""), url("fonts/SangBleuSunrise-Regular-WebS.woff2") format("woff2"), url("fonts/SangBleuSunrise-Regular-WebS.woff") format("woff");
 }
 
-/* SangBleu Sunrise Regular Italic */
+/* Montserrat Regular Italic */
 @font-face {
-  font-family: 'SangBleu Sunrise';
+  font-family: 'Montserrat';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
   src: local(""), url("fonts/SangBleuSunrise-RegularItalic-WebS.woff2") format("woff2"), url("fonts/SangBleuSunrise-RegularItalic-WebS.woff") format("woff");
 }
 
-/* GT America */
+/* Montserrat */
 @font-face {
-  font-family: 'GT America';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -782,7 +782,7 @@ svg {
 }
 
 @font-face {
-  font-family: 'GT America';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -790,7 +790,7 @@ svg {
 }
 
 @font-face {
-  font-family: 'GT America';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -1102,7 +1102,7 @@ svg {
 
 @media (min-width: 768px) {
   .fullBleedImage__captionBody {
-    font-family: "GT America", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
     line-height: 124%;
     letter-spacing: -0.02em;
@@ -1557,7 +1557,7 @@ svg {
 
 @media (min-width: 768px) {
   .review__customerName {
-    font-family: "GT America", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 14px;
     line-height: 150%;
     font-weight: 400;
@@ -1899,7 +1899,7 @@ svg {
 }
 
 .storyScroller__line {
-  font-family: "SangBleu Sunrise", serif;
+  font-family: "Montserrat", serif;
   font-size: 32px;
   line-height: 118%;
   letter-spacing: -0.02em;
@@ -2226,7 +2226,7 @@ table.table td:first-child {
 @media (min-width: 768px) {
   .textDetailImageGrid__imageCaption {
     color: #FFFFFF;
-    font-family: "GT America", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
     line-height: 124%;
     letter-spacing: -0.02em;
