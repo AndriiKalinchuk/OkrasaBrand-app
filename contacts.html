@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OkrasaBrand - products</title>
+    <title>OkrasaBrand - contacts</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -28,7 +28,6 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
-
   <body class="bg--cotton">
     <div id="menu">
       <div
@@ -237,426 +236,67 @@
       })();
     </script>
 
-    <script>
-      "use strict";
-      (function () {
-        let observer;
-        document.addEventListener("pjax:success", function () {
-          const hero = document.querySelector(".homeHero");
-          if (!hero) return;
-
-          const tags = document.querySelector(".featuredProductTags");
-          if (observer) observer.disconnect();
-          observer = new IntersectionObserver(function (entries) {
-            for (const entry of entries) {
-              tags.classList.toggle(
-                "featuredProductTags--forceOpen",
-                entry.isIntersecting
-              );
-            }
-          });
-
-          observer.observe(hero);
-        });
-      })();
-    </script>
-
     <div id="body__contentWrapper">
       <div id="body__content">
         <main>
-          <script>
-            "use strict";
-            (function () {
-              document.addEventListener(
-                "pjax:success",
-                function () {
-                  const hoverText = document.querySelector(
-                    ".productLinkHoverText"
-                  );
-                  const onMouseMove = function (event) {
-                    hoverText.style.top = `${event.pageY}px`;
-                    if (
-                      event.pageX + hoverText.clientWidth >
-                      window.innerWidth
-                    ) {
-                      hoverText.classList.add("productLinkHoverText--reverse");
-                      hoverText.style.right = `${
-                        window.innerWidth - event.pageX
-                      }px`;
-                      hoverText.style.left = "unset";
-                    } else {
-                      hoverText.classList.remove(
-                        "productLinkHoverText--reverse"
-                      );
-                      hoverText.style.left = `${event.pageX}px`;
-                      hoverText.style.right = "unset";
-                    }
-                  };
-
-                  window.addEventListener("mousemove", onMouseMove);
-                  let hoverTransition;
-                  document.querySelectorAll(".productLink").forEach((el) => {
-                    el.addEventListener("mouseenter", function (event) {
-                      clearTimeout(hoverTransition);
-                      hoverText.style.opacity = 1;
-                      hoverText.style.display = "flex";
-                    });
-                    el.addEventListener("mouseleave", function (event) {
-                      hoverText.style.opacity = 0;
-                      hoverTransition = setTimeout(function () {
-                        hoverText.style.display = "none";
-                      }, 200);
-                    });
-                  });
-
-                  document.addEventListener(
-                    "pjax:send",
-                    function () {
-                      window.removeEventListener("mousemove", onMouseMove);
-                    },
-                    { once: true }
-                  );
-                },
-                { once: true }
-              );
-            })();
-          </script>
-
-          <div class="content contentgrid mt7 lg:mt9">
-            <header
-              class="animation-container col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-2 lg:col-span-6 mb6"
-            >
-              <h1 class="h3 mb6" data-animate="slide-up delay-1">
-                Стань краще!
-              </h1>
-              <div
-                class="font-body-lg font-weight-lt"
-                data-animate="slide-up delay-2"
-              >
-                <div class="richtext">
-                  <p>
-                    «У краси смислів стільки ж, скільки у людини настроїв. Краса
-                    – це символ символів. Краса відкриває нам все, оскільки не
-                    виражає нічого.» / Оскар Уайльд
-                  </p>
-                  <p>
-                    «Хоча в пошуках прекрасного ми мандруємо по всьому світу, ми
-                    повинні мати його в собі, інакше нам не знайти його.» /
-                    Ральф Уолдо Емерсон
-                  </p>
-                </div>
-              </div>
-            </header>
-
-            <section
-              class="animation-container productIndex__products col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-10 lg:col-span-14"
-            >
-              <a
-                href="/products/earrings"
-                class="productIndex__product flex flex-col mb6 lg:mb8"
-                data-animate="slide-up delay-1 md:delay-2"
-                data-product-id="6764572737614"
-                data-variant-id="39875784474702"
-              >
-                <div
-                  class="productLink relative overflow-h w-full"
-                  style="aspect-ratio: 1"
+          <div class="bg--sunset2 color--white">
+            <div class="contactPage">
+              <header class="pt6 mb7 md:pt9 content contentgrid">
+                <h1
+                  class="h2 col-start-1 col-span-12 md:col-start-2 md:col-span-24"
                 >
-                  <img
-                    class="w-contained w-full h-full fit--cover rounded"
-                    src="./img/dove1.jpg"
-                    width="640"
-                    height="360"
-                    alt="Dove"
-                    style="object-position: 77.890625% 49.13194444444444%"
-                    srcset="./img/dove1.jpg 1280w, ./img/dove1.jpg 640w"
-                    sizes="(min-width: 768px) 50vw,
-					100vw"
-                  />
-                  <img
-                    class="w-contained w-full h-full fit--cover rounded"
-                    src="./img/dove1.jpg"
-                    width="640"
-                    height="427"
-                    alt="Dove"
-                    style="object-position: 47.890625% 45.242002250439114%"
-                    srcset="./img/dove1.jpg 1280w, ./img/dove1.jpg 640w"
-                    sizes="(min-width: 768px) 50vw,
-					100vw"
-                  />
+                  Вітання
+                </h1>
+              </header>
+              <section class="content contentgrid">
+                <div
+                  class="col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-15 lg:col-span-9"
+                >
+                  <div class="h6 mb6">
+                    Ми працюємо з Понеділка по Суботу з 9.00 до 17.00 за
+                    Київським часом.
+                  </div>
                 </div>
                 <div
-                  class="flex flex-row justify-between items-center bb1--gray3 pt3 pb3"
+                  class="mb9 col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-15 lg:col-span-9"
                 >
-                  <h2 class="h7">Кульчики</h2>
-                  <span class="eyebrow-sm">від 350 грн</span>
-                </div>
-                <div class="grow flex flex-row items-center bb1--gray3 pt3 pb3">
-                  <p class="font-body-md font-weight-lt mr2">
-                    Купила Олена кульчики зелені: як уділа у вуха – славна була
-                    дівуха!
-                  </p>
-                  <span style="flex-shrink: 0"
-                    ><svg
-                      width="15"
-                      height="12"
-                      viewBox="0 0 15 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </a>
-              <a
-                href="/products/necklaces"
-                class="productIndex__product flex flex-col mb6 lg:mb8"
-                data-animate="slide-up delay-2 md:delay-3"
-                data-product-id="6764572901454"
-                data-variant-id="39875785261134"
-              >
-                <div
-                  class="productLink relative overflow-h w-full"
-                  style="aspect-ratio: 1"
-                >
-                  <img
-                    class="w-contained w-full h-full fit--cover rounded"
-                    src="./img/dove1.jpg"
-                    width="640"
-                    height="360"
-                    alt="Dove"
-                    style="
-                      object-position: 52.42187499999999% 64.96527777777777%;
-                    "
-                    srcset="./img/dove1.jpg 1280w, ./img/dove1.jpg 640w"
-                    sizes="(min-width: 768px) 50vw,
-					100vw"
-                  />
-                  <img
-                    class="w-contained w-full h-full fit--cover rounded"
-                    src="./img/dove1.jpg"
-                    width="640"
-                    height="360"
-                    alt="Dove"
-                    style="object-position: 24.921875% 50.798611111111114%"
-                    srcset="./img/dove1.jpg 1280w, ./img/dove1.jpg 640w"
-                    sizes="(min-width: 768px) 50vw,
-					100vw"
-                  />
+                  <div class="inline-flex flex-col">
+                    <a href="mailto:varenykyfashion.elena@gmail.com">
+                      <div
+                        class="font-cta-sm text-center contactButton--black mb2"
+                      >
+                        <span class="mr2">Email</span>
+                        <span class="mr2">/</span>
+                        <span>varenykyfashion.elena@gmail.com</span>
+                      </div>
+                    </a>
+                    <a href="tel:312.626.9680">
+                      <div class="font-cta-sm text-center contactButton--white">
+                        <span class="mr2">Тел</span>
+                        <span class="mr2">/</span>
+                        <span>+380 50 514 08 00</span>
+                      </div>
+                    </a>
+                  </div>
                 </div>
                 <div
-                  class="flex flex-row justify-between items-center bb1--gray3 pt3 pb3"
+                  class="mb7 font-body-lg col-span-1 col-span-12 md:col-start-2 md:col-span-12 lg:col-start-15 lg:col-span-10"
                 >
-                  <h2 class="h7">Намисто</h2>
-                  <span class="eyebrow-sm">від 350 грн</span>
+                  <div class="richtext">
+                    <p>Наша адреса:</p>
+                    <p>
+                      <a
+                        href="https://maps.app.goo.gl/cc5byt6i9CHL9Dip9"
+                        title=""
+                        target="_blank"
+                        rel="noreferrer"
+                        >Київ</a
+                      >
+                    </p>
+                  </div>
                 </div>
-                <div class="grow flex flex-row items-center bb1--gray3 pt3 pb3">
-                  <p class="font-body-md font-weight-lt mr2">
-                    Труси мене парубоче, щоб намисто бряжчало!
-                  </p>
-                  <span style="flex-shrink: 0"
-                    ><svg
-                      width="15"
-                      height="12"
-                      viewBox="0 0 15 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </a>
-              <a
-                href="/products/bracelets"
-                class="productIndex__product flex flex-col mb6 lg:mb8"
-                data-animate="slide-up delay-3 md:delay-4"
-                data-product-id="6764574179406"
-                data-variant-id="40098672607310"
-              >
-                <div
-                  class="productLink relative overflow-h w-full"
-                  style="aspect-ratio: 1"
-                >
-                  <img
-                    class="w-contained w-full h-full fit--cover rounded"
-                    src="./img/dove1.jpg"
-                    width="640"
-                    height="360"
-                    alt="Dove"
-                    style="object-position: 43.046875% 39.6875%"
-                    srcset="./img/dove1.jpg 1280w, ./img/dove1.jpg 640w"
-                    sizes="(min-width: 768px) 50vw,
-					100vw"
-                  />
-                  <img
-                    class="w-contained w-full h-full fit--cover rounded"
-                    src="./img/dove1.jpg"
-                    width="640"
-                    height="360"
-                    alt="Dove"
-                    style="object-position: 17.265625% 57.1875%"
-                    srcset="./img/dove1.jpg 1280w, ./img/dove1.jpg 640w"
-                    sizes="(min-width: 768px) 50vw,
-					100vw"
-                  />
-                </div>
-                <div
-                  class="flex flex-row justify-between items-center bb1--gray3 pt3 pb3"
-                >
-                  <h2 class="h7">Браслети</h2>
-                  <span class="eyebrow-sm">від 350 грн</span>
-                </div>
-                <div class="grow flex flex-row items-center bb1--gray3 pt3 pb3">
-                  <p class="font-body-md font-weight-lt mr2">
-                    Від любовних обіймів і браслет зламається.
-                  </p>
-                  <span style="flex-shrink: 0"
-                    ><svg
-                      width="15"
-                      height="12"
-                      viewBox="0 0 15 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </a>
-              <a
-                href="/products/rings"
-                class="productIndex__product flex flex-col mb6 lg:mb8"
-                data-animate="slide-up delay-4 md:delay-5"
-                data-product-id="6850936602702"
-                data-variant-id="40162398634062"
-              >
-                <div
-                  class="productLink relative overflow-h w-full"
-                  style="aspect-ratio: 1"
-                >
-                  <img
-                    class="w-contained w-full h-full fit--cover rounded"
-                    src="./img/dove1.jpg"
-                    width="541"
-                    height="640"
-                    alt=""
-                    style="object-position: 50% 50%"
-                    srcset="./img/dove1.jpg 1280w, ./img/dove1.jpg 640w"
-                    sizes="(min-width: 768px) 50vw,
-					100vw"
-                  />
-                  <img
-                    class="w-contained w-full h-full fit--cover rounded"
-                    src="./img/dove1.jpg"
-                    width="541"
-                    height="640"
-                    alt=""
-                    style="object-position: 50% 50%"
-                    srcset="./img/dove1.jpg 1280w, ./img/dove1.jpg 640w"
-                    sizes="(min-width: 768px) 50vw,
-					100vw"
-                  />
-                </div>
-                <div
-                  class="flex flex-row justify-between items-center bb1--gray3 pt3 pb3"
-                >
-                  <h2 class="h7">Кільця</h2>
-                  <span class="eyebrow-sm">від 350 грн</span>
-                </div>
-                <div class="grow flex flex-row items-center bb1--gray3 pt3 pb3">
-                  <p class="font-body-md font-weight-lt mr2">
-                    Любов подібна до кільця, де ні початку, ні кінця.
-                  </p>
-                  <span style="flex-shrink: 0"
-                    ><svg
-                      width="15"
-                      height="12"
-                      viewBox="0 0 15 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </a>
-            </section>
-          </div>
-
-          <script>
-            document.addEventListener(
-              "tracking:pageInit",
-              function () {
-                try {
-                  const product_ids = [];
-                  document
-                    .querySelectorAll(".productIndex__product")
-                    .forEach(function (el) {
-                      product_ids.push({
-                        product: parseInt(el.dataset.productId),
-                        variant: parseInt(el.dataset.variantId),
-                      });
-                    });
-                  const impressions = product_ids.map(function (ids, i) {
-                    return track__buildImpression(
-                      ids.product.toString(),
-                      ids.variant.toString(),
-                      i + 1,
-                      undefined,
-                      window.location.pathname
-                    );
-                  });
-                  track_collectionView(impressions);
-                } catch (e) {
-                  console.error(e);
-                }
-              },
-              { once: true }
-            );
-
-            document.addEventListener(
-              "pjax:success",
-              function () {
-                try {
-                  document
-                    .querySelectorAll(".productIndex__product")
-                    .forEach(function (el, i) {
-                      const p_id = parseInt(el.dataset.productId);
-                      const v_id = parseInt(el.dataset.variantId);
-                      el.addEventListener("click", function (e) {
-                        const prod = track__buildProduct(
-                          p_id.toString(),
-                          v_id.toString(),
-                          undefined,
-                          i
-                        );
-                        track_productClick(prod);
-                      });
-                    });
-                } catch (e) {
-                  console.error(e);
-                }
-              },
-              { once: true }
-            );
-          </script>
-
-          <div class="productLinkHoverText eyebrow-sm absolute">
-            View Product
+              </section>
+            </div>
           </div>
         </main>
         <footer>
@@ -910,7 +550,7 @@
         <div class="modal__content brad--1 bg--white relative flex flex-col">
           <header class="p2 tr">
             <button class="cursor-pointer color--black" aria-label="Close">
-              &times;
+              ×
             </button>
           </header>
           <div
