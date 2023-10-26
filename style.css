@@ -726,6 +726,7 @@ svg {
   letter-spacing: 0.01em;
 }
 
+
 .font-menu-lg {
   font-family: "Montserrat", sans-serif;
   font-size: 56px;
@@ -1012,7 +1013,8 @@ svg {
 }
 
 .button--tag {
-  padding: 12px 24px;
+  padding: 8px 16px;
+  min-width: 70px;
 }
 
 @media (min-width: 640px) {
@@ -1267,13 +1269,10 @@ svg {
   }
 }
 
-.homeHero__productTags .button {
-  margin-right: 5px;
+.homeHero__productTags  {
+  gap: 5px;
 }
 
-.homeHero__productTags .button:last-child {
-  margin-right: none;
-}
 
 @media (min-width: 768px) {
   .featuredBlogGrid {
