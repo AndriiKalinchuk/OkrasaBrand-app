@@ -17,11 +17,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
     <link
-      href="https://db.onlinewebfonts.com/c/76cad44852ba93f820a16d446f80c5e2?family=GT+America+Light"
-      rel="stylesheet"
-    />
-
-    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
@@ -81,7 +76,7 @@
         </div>
         <a href="/" class="md:hidden"
           ><img
-            src="./img/desktop/logo-red-en.jpg"
+            src="./img/desktop/logo-white.jpg"
             alt="Окраса"
             id="menu__mobileLogo"
             class="text-center"
@@ -130,7 +125,7 @@
           <!-- <li class="mb3"><a href="/gallery">Галерея</a></li> -->
         </ul>
         <ul class="font-menu-sm mt5 mb5" style="flex-grow: 1">
-          <li class="mb3"><a href="/production">How it's made</a></li>
+          <li class="mb3"><a href="production.html">How it's made</a></li>
           <li class="mb3">
             <a href="/shipping-and-returns">Доставка і повернення</a>
           </li>
@@ -162,7 +157,7 @@
       </nav>
     </div>
     <div
-      class="featuredProductTags hidden lg:inline-flex flex-row"
+      class="featuredProductTags hidden lg:inline-flex flex-row featuredProductTags--forceOpen"
       onmouseleave="window.__featuredProductHoverTimeout = setTimeout(() => { this.classList.remove('featuredProductTags--open'); }, 1000);"
       style="opacity: 1; transition: opacity 1s ease 0s"
     >
@@ -201,14 +196,14 @@
           href="/products/bracelets"
           class="button button--small font-cta-sm"
           onclick="this.parentElement.classList.remove('featuredProductTags--open');"
-          >Браслет</a
+          >Браслети</a
         >
-        <!-- <a
+        <a
           href="/products/rings"
           class="button button--small font-cta-sm"
           onclick="this.parentElement.classList.remove('featuredProductTags--open');"
           >Кільця</a
-        > -->
+        >
       </div>
     </div>
 
@@ -1255,8 +1250,8 @@
                       <h2
                         class="h4 mb5 lg:mb10 color--cotton col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-2 lg:col-span-15"
                       >
-                        “Якщо ви шукаєте унікальні прикраси, вироблені власними
-                        руками дизайнера.”
+                        “Якщо ви шукаєте унікальні прикраси вироблені дизайнером
+                        власноруч.”
                       </h2>
                     </div>
                     <div
@@ -1966,5 +1961,6 @@
     <script type="module" defer src="./js/main.js"></script>
     <script type="module" defer src="./js/pjax@2.4.0.min.js"></script>
     <script type="module" defer src="./js/storefront.js"></script>
+    <!-- <script src="./node_modules/pjax/pjax.js"></script> -->
   </body>
 </html>

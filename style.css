@@ -2193,7 +2193,7 @@ table.table td:first-child {
 
 .featuredProductTags--open .featuredProductTags__tags,
 .featuredProductTags--forceOpen .featuredProductTags__tags {
-  width: 300px;
+  width: 464px;
   opacity: 1;
   pointer-events: auto;
 }

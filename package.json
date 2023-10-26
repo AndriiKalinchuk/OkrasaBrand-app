@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.4.5",
-    "glob": "^10.3.10"
+    "glob": "^10.3.10",
+    "vite": "^4.4.5"
   },
   "dependencies": {
-    
+    "pjax": "^0.2.8",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.4"
   }

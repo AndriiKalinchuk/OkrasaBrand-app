@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OkrasaBrand - contacts</title>
+    <title>OkrasaBrand - production</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body class="bg--cotton">
     <div id="menu">
       <div
@@ -234,64 +235,238 @@
     <div id="body__contentWrapper">
       <div id="body__content">
         <main>
-          <div class="bg--sunset2 color--white">
-            <div class="contactPage">
-              <header class="pt6 mb7 md:pt9 content contentgrid">
-                <h1
-                  class="h2 col-start-1 col-span-12 md:col-start-2 md:col-span-24"
-                >
-                  Вітання
-                </h1>
-              </header>
-              <section class="content contentgrid">
-                <div
-                  class="col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-15 lg:col-span-9"
-                >
-                  <div class="h6 mb6">
-                    Ми працюємо з Понеділка по Суботу з 9.00 до 17.00 за
-                    Київським часом.
-                  </div>
+          <script>
+            "use strict";
+            (function () {
+              function map(value, istart, istop, ostart, ostop) {
+                return (
+                  ostart +
+                  (ostop - ostart) * ((value - istart) / (istop - istart))
+                );
+              }
+              function constrain(value, min, max) {
+                return Math.max(min, Math.min(max, value));
+              }
+
+              window.addEventListener(
+                "pjax:success",
+                function () {
+                  document
+                    .querySelectorAll(".storyScroller")
+                    .forEach((root) => {
+                      const content = root.querySelector(
+                        ".storyScroller__content"
+                      );
+                      const elements =
+                        content.querySelectorAll("[data-scroller]");
+                      elements.forEach((el) => {
+                        const parts = el.dataset.scroller.split("/");
+                        el._scrollTriggerStart = parseFloat(parts[0]);
+                        el._scrollTriggerEnd = parseFloat(parts[1]);
+                      });
+
+                      const onResize = function () {
+                        root.style.minHeight = `${content.clientHeight * 5}px`;
+                      };
+                      window.addEventListener("resize", onResize);
+                      onResize();
+
+                      const onScroll = function () {
+                        const rect = root.getBoundingClientRect();
+                        const offsetTop = rect.top - window.innerHeight / 2;
+                        const pos = constrain(
+                          (offsetTop / rect.height) * -1,
+                          0,
+                          1
+                        );
+
+                        for (const el of elements) {
+                          el.style.opacity = constrain(
+                            map(
+                              pos,
+                              el._scrollTriggerStart,
+                              el._scrollTriggerEnd,
+                              0,
+                              1
+                            ),
+                            0,
+                            1
+                          );
+                        }
+                      };
+                      window.addEventListener("scroll", onScroll);
+                      onScroll();
+
+                      // cleanup
+                      window.addEventListener(
+                        "pjax:send",
+                        function () {
+                          window.removeEventListener("resize", onResize);
+                          window.removeEventListener("scroll", onScroll);
+                        },
+                        { once: true }
+                      );
+                    });
+                },
+                { once: true }
+              );
+            })();
+          </script>
+
+          <header class="mt6 mb7 lg:mt9 lg:mb8">
+            <div class="contentgrid content pb5 pt5 animation-container">
+              <h1
+                class="h1 col-start-1 col-span-12 md:col-start-2 md:col-span-18 lg:col-start-2 lg:col-span-3 mb6 lg:mb0"
+                data-animate="slide-up"
+              >
+                How it`s made
+              </h1>
+              <div
+                class="col-start-1 col-span-10 md:col-start-2 md:col-span-18 lg:col-start-13 lg:col-span-8 font-body-lg font-weight-lt flex items-end"
+                data-animate="slide-up"
+              >
+                <div class="richtext">
+                  <p>
+                    Виготовляю прикраси власноруч
+                  </p>
                 </div>
-                <div
-                  class="mb9 col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-15 lg:col-span-9"
-                >
-                  <div class="inline-flex flex-col">
-                    <a href="mailto: elena@gmail.com">
-                      <div
-                        class="font-cta-sm text-center contactButton--black mb2"
-                      >
-                        <span class="mr2">Email</span>
-                        <span class="mr2">/</span>
-                        <span>elena@gmail.com</span>
-                      </div>
-                    </a>
-                    <a href="tel:312.626.9680">
-                      <div class="font-cta-sm text-center contactButton--white">
-                        <span class="mr2">Тел</span>
-                        <span class="mr2">/</span>
-                        <span>+380 50 514 08 00</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div
-                  class="mb7 font-body-lg col-span-1 col-span-12 md:col-start-2 md:col-span-12 lg:col-start-15 lg:col-span-10"
-                >
-                  <div class="richtext">
-                    <p>Наша адреса:</p>
-                    <p>
-                      <a
-                        href="https://maps.app.goo.gl/cc5byt6i9CHL9Dip9"
-                        title=""
-                        target="_blank"
-                        rel="noreferrer"
-                        >Київ</a
-                      >
-                    </p>
-                  </div>
-                </div>
-              </section>
+              </div>
             </div>
+          </header>
+
+          <section class="fullBleedImage sticky t0 content-fullbleed">
+            <img
+              class="w-full h-auto fit--cover mb2 md:mb0"
+              src="./img/photo_doves.jpg"
+              width="640"
+              height="434"
+              alt="Doves"
+              style="
+                min-height: 100vh;
+                object-position: 8.359375% 51.25287636943248%;
+              "
+              srcset="
+                ./img/photo_doves.jpg  1920w,
+                ./img/photo_doves.jpg 1280w,
+                ./img/photo_doves.jpg   640w
+              "
+              sizes="100vw"
+            />
+          </section>
+
+          <div class="bg--cotton relative" style="padding: 1px 0">
+            <section
+              class="mt8 mb8 md:mt9 md:mb9 lg:mt10 lg:mb10 content contentgrid animation-container"
+            >
+              <div
+                class="col-start-1 col-span-12 md:col-start-4 md:col-span-18 lg:col-start-13 lg:col-span-9"
+              >
+                <h3 class="h6 mb5" data-animate="slide-up">
+                  Кульчики, намисто, браслети, кільця 
+                </h3>
+                <h3
+                  class="h6 twoLineCallout__kicker"
+                  data-animate="slide-up delay-3"
+                >
+                  <span>O</span><span>k</span><span>r</span><span>a</span
+                  ><span>s</span><span>a</span><span>B</span><span>r</span
+                  ><span>a</span><span>n</span><span>d</span><span>.</span>
+                </h3>
+              </div>
+            </section>
+            <section
+              class="animation-container fullBleedImage relative flex flex-col justify-center md:justify-start md:items-start items-center content-fullbleed"
+            >
+              <img
+                class="w-full h-auto fit--cover mb3 md:mb0"
+                src="./img/photo_doves.jpg"
+                width="640"
+                height="400"
+                alt="Doves"
+                style="object-position: 50% 50%"
+                srcset="
+                  ./img/photo_doves.jpg 1920w,
+                  ./img/photo_doves.jpg 1280w,
+                  ./img/photo_doves.jpg  640w
+                "
+                sizes="100vw"
+              />
+            </section>
+            <section
+              class="mt9 mb9 lg:mt10 lg:mb10 storyScroller content relative"
+            >
+              <div
+                class="storyScroller__content t0 sticky flex flex-col justify-center"
+              >
+                <div class="mb6 lg:mb0">
+                  <h2
+                    class="h5 eyebrow-sm text-center uppercase mt3 md:mt0 mb7"
+                  >
+                    Переваги виробів Okrasa
+                  </h2>
+                  <div class="text-center">
+                    <h3
+                      class="storyScroller__line mb3"
+                      data-scroller="0/0.14285714285714285"
+                    >
+                      Запалює фарби життя.
+                    </h3>
+                    <h3
+                      class="storyScroller__line mb3"
+                      data-scroller="0.14285714285714285/0.2857142857142857"
+                    >
+                      Тобі личить окраса.
+                    </h3>
+                    <h3
+                      class="storyScroller__line mb3"
+                      data-scroller="0.2857142857142857/0.42857142857142855"
+                    >
+                      Акцент твого образу.
+                    </h3>
+                    <h3
+                      class="storyScroller__line mb3"
+                      data-scroller="0.42857142857142855/0.5714285714285714"
+                    >
+                      Твоя особиста прикраса.
+                    </h3>
+                    <h3
+                      class="storyScroller__line mb3"
+                      data-scroller="0.7142857142857142/0.857142857142857"
+                    >
+                      Краса у кожній деталі.
+                    </h3>
+                  </div>
+                </div>
+                <div class="contentgrid">
+                  <div
+                    class="col-start-2 col-span-10 md:col-start-7 md:col-span-12 lg:col-start-9 lg:col-span-8 text-center font-body-lg font-weight-lt"
+                    data-scroller="0.857142857142857/0.9999999999999998"
+                  ></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="content contentgrid mt7 mb7 lg:mt9 lg:mb9">
+              <div
+                class="col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-8 lg:col-span-10"
+              >
+                <div class="animation-container">
+                  <img
+                    class="w-full h-auto mb3 md:mb6 lg:mb8 rounded"
+                    src="./img/photo_doves.jpg"
+                    width="640"
+                    height="640"
+                    alt="Doves"
+                    style="object-position: 50% 50%"
+                    srcset="
+                      ./img/photo_doves.jpg 1280w,
+                      ./img/photo_doves.jpg  640w
+                    "
+                    sizes="(min-width: 1024px) 50vw,
+					100vw"
+                    data-animate="slide-up"
+                  />
+            </section>
           </div>
         </main>
         <footer>
@@ -545,7 +720,7 @@
         <div class="modal__content brad--1 bg--white relative flex flex-col">
           <header class="p2 tr">
             <button class="cursor-pointer color--black" aria-label="Close">
-              ×
+              &times;
             </button>
           </header>
           <div
@@ -557,7 +732,7 @@
     </div>
     <script type="module" defer src="./js/main.js"></script>
     <script type="module" defer src="./js/pjax@2.4.0.min.js"></script>
-    <!-- <script src="./node_modules/pjax/pjax.js"></script> -->
     <script type="module" defer src="./js/storefront.js"></script>
+    <!-- <script src="./node_modules/pjax/pjax.js"></script> -->
   </body>
 </html>
