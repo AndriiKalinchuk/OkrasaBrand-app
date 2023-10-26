@@ -33,15 +33,15 @@ function menuInit() {
     });
 
   // --- CART --- //
-  // const cartButton = document.getElementById("menu__cartButton");
-  // const cartIndicator = document.getElementById("menu__cartIndicator");
+  const cartButton = document.getElementById("menu__cartButton");
+  const cartIndicator = document.getElementById("menu__cartIndicator");
 
-  // let cartIndicatorInterval = setInterval(function () {
-  //   cartIndicator.classList.add("alert");
-  //   setTimeout(function () {
-  //     cartIndicator.classList.remove("alert");
-  //   }, 600);
-  // }, 8000);
+  let cartIndicatorInterval = setInterval(function () {
+    cartIndicator.classList.add("alert");
+    setTimeout(function () {
+      cartIndicator.classList.remove("alert");
+    }, 600);
+  }, 8000);
 
   document.addEventListener("cart:added", function () {
     cartButton.classList.add("menu__cartButton--alert");
