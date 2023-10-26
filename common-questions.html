@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OkrasaBrand - common questions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg--cotton">
+    <div id="menu">
+      <div
+        id="menu__bar"
+        class="color--cotton bg--black flex flex-row md:flex-col justify-between items-center md:pb3"
+      >
+        <a href="/" class="hidden md:block"
+          ><img
+            src="./img/desktop/logo-red-en.jpg"
+            alt="Окраса"
+            class="w-full h-auto"
+            width="161"
+            height="156"
+        /></a>
+        <div class="cursor-pointer menu__toggle" onclick="window.menuToggle();">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="27.5303"
+              y1="4.53033"
+              x2="4.90291"
+              y2="27.1577"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></line>
+            <line
+              x1="27.5303"
+              y1="4.53033"
+              x2="4.90291"
+              y2="27.1577"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></line>
+            <line
+              x1="27.4697"
+              y1="27.5303"
+              x2="4.84225"
+              y2="4.90291"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></line>
+          </svg>
+          <!-- <svg class="burger-icon" width="32" height="32">
+            <use href="./img/icons.svg#icon-menu-hamburger"></use>
+          </svg> -->
+        </div>
+        <a href="/" class="md:hidden"
+          ><img
+            src="./img/desktop/logo-white.jpg"
+            alt="Окраса"
+            id="menu__mobileLogo"
+            class="text-center"
+            width="389"
+            height="124"
+            style="height: 32px; width: auto"
+        /></a>
+        <a
+          href="/cart"
+          id="menu__cartButton"
+          class="relative bg--cotton color--black flex items-center justify-center"
+        >
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Cart</title>
+            <path
+              d="M1.86644 11.2C2.3819 11.2 2.79977 10.7822 2.79977 10.2667C2.79977 9.75124 2.3819 9.33337 1.86644 9.33337C1.35097 9.33337 0.933105 9.75124 0.933105 10.2667C0.933105 10.7822 1.35097 11.2 1.86644 11.2Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M9.33324 11.2C9.8487 11.2 10.2666 10.7822 10.2666 10.2667C10.2666 9.75124 9.8487 9.33337 9.33324 9.33337C8.81777 9.33337 8.3999 9.75124 8.3999 10.2667C8.3999 10.7822 8.81777 11.2 9.33324 11.2Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M10.7334 7.46683H1.22183L1.6885 6.5335H8.86677C8.95997 6.53348 9.05102 6.50555 9.12821 6.45332C9.20539 6.40109 9.26517 6.32694 9.29984 6.24043L11.1665 1.57376C11.1949 1.50296 11.2055 1.42628 11.1973 1.35043C11.1892 1.27459 11.1626 1.20189 11.1199 1.13871C11.0771 1.07552 11.0196 1.02378 10.9522 0.988005C10.8848 0.952229 10.8097 0.933514 10.7334 0.933496H1.5933L0.797168 0.136429C0.709541 0.0488014 0.590692 -0.000427246 0.466768 -0.000427246C0.342844 -0.000427246 0.223995 0.0488014 0.136368 0.136429C0.0487404 0.224057 -0.000488281 0.342905 -0.000488281 0.466829C-0.000488281 0.590753 0.0487404 0.709602 0.136368 0.797229L0.933435 1.59336V5.9567L0.0495679 7.72443C0.0139161 7.79558 -0.00294925 7.87466 0.000574618 7.95416C0.00409849 8.03367 0.0278945 8.11095 0.0697012 8.17866C0.111508 8.24637 0.169936 8.30227 0.239434 8.34104C0.308931 8.37981 0.387188 8.40016 0.466768 8.40017H10.7334C10.8572 8.40017 10.9759 8.351 11.0634 8.26348C11.1509 8.17597 11.2001 8.05727 11.2001 7.9335C11.2001 7.80973 11.1509 7.69103 11.0634 7.60352C10.9759 7.516 10.8572 7.46683 10.7334 7.46683Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+
+          <!-- <div id="menu__cartIndicator" class="bg--sunset2 absolute"></div> -->
+        </a>
+      </div>
+
+      <nav
+        id="menu__content"
+        class="color--cotton bg--black h-full flex flex-col lg:justify-between scroll-y"
+      >
+        <ul class="font-menu-lg" style="flex-grow: 4">
+          <li class="mb3"><a href="products.html">Магазин</a></li>
+          <li class="mb3"><a href="about.html">Про нас</a></li>
+          <!-- <li class="mb3"><a href="/gallery">Галерея</a></li> -->
+        </ul>
+        <ul class="font-menu-sm mt5 mb5" style="flex-grow: 1">
+          <li class="mb3"><a href="production.html">How it's made</a></li>
+          <li class="mb3">
+            <a href="shipping-and-returns.html">Доставка і повернення</a>
+          </li>
+          <li class="mb3">
+            <a href="common-questions.html">Загальні питання</a>
+          </li>
+
+          <li class="mb3">
+            <a href="contacts.html" class="flex items-center nav__link"
+              ><span>Контакти</span></a
+            >
+          </li>
+        </ul>
+        <footer>
+          <div class="mb3 flex">
+            <a
+              href="https://instagram.com/okrasa.brand"
+              target="_blank"
+              class="mr3"
+              ><svg class="footer-icon" width="22" height="22">
+                <use href="./img/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="font-body-sm font-weight-lt">
+            Copyright © 2023 Okrasa brand. All rights reserved.
+          </p>
+        </footer>
+      </nav>
+    </div>
+    <div
+      class="featuredProductTags hidden lg:inline-flex flex-row"
+      onmouseleave="window.__featuredProductHoverTimeout = setTimeout(() => { this.classList.remove('featuredProductTags--open'); }, 1000);"
+      style="opacity: 1; transition: opacity 1s ease 0s"
+    >
+      <button
+        aria-label="product menu"
+        class="button button--smallRound featuredProductTags__toggle flex items-center font-cta-sm"
+        onmouseenter="clearTimeout(window.__featuredProductHoverTimeout); this.parentElement.classList.add('featuredProductTags--open');"
+      >
+        <svg
+          width="19"
+          height="3"
+          viewBox="0 0 19 3"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="9.5" cy="1.5" r="1.5" fill="currentColor"></circle>
+          <circle cx="17.5" cy="1.5" r="1.5" fill="currentColor"></circle>
+          <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"></circle>
+        </svg>
+      </button>
+
+      <div class="featuredProductTags__tags flex flex-row">
+        <a
+          href="/products/earrings"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Кульчики</a
+        >
+        <a
+          href="/products/necklaces"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Намисто</a
+        >
+        <a
+          href="/products/bracelets"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Браслети</a
+        >
+        <a
+          href="/products/rings"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Кільця</a
+        >
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+      (function () {
+        let observer;
+        document.addEventListener("pjax:success", function () {
+          const hero = document.querySelector(".homeHero");
+          if (!hero) return;
+
+          const tags = document.querySelector(".featuredProductTags");
+          if (observer) observer.disconnect();
+          observer = new IntersectionObserver(function (entries) {
+            for (const entry of entries) {
+              tags.classList.toggle(
+                "featuredProductTags--forceOpen",
+                entry.isIntersecting
+              );
+            }
+          });
+
+          observer.observe(hero);
+        });
+      })();
+    </script>
+
+    <div id="body__contentWrapper">
+      <div id="body__content">
+        <main>
+          <script>
+            "use strict";
+            (function () {
+              function closeAllFolds(exclude) {
+                document.querySelectorAll(".accordion__fold").forEach((f) => {
+                  if (f == exclude) return;
+                  f._toggle(false);
+                });
+              }
+
+              function initAccordionFold(fold) {
+                const body = fold.querySelector(".accordion__foldBody");
+                fold._toggle = function (open) {
+                  if (open == undefined)
+                    open = fold.classList.contains("accordion__fold--closed");
+                  if (open == true) closeAllFolds(fold);
+
+                  fold.classList.toggle("accordion__fold--closed", !open);
+                  fold.setAttribute("aria-expanded", open);
+                  body.style.transition = "height 0.5s";
+                  if (!open) {
+                    body.style.height = "0px";
+                  } else {
+                    body.style.height =
+                      body.firstElementChild.getBoundingClientRect().height +
+                      "px";
+                  }
+                };
+                fold.addEventListener("click", function () {
+                  fold._toggle();
+                });
+                fold.addEventListener("keydown", function (event) {
+                  if (
+                    event instanceof KeyboardEvent &&
+                    event.key !== "Enter" &&
+                    event.key !== " "
+                  )
+                    return;
+                  fold._toggle();
+                  event.preventDefault(); // prevent space key from scrolling downwards
+                });
+              }
+
+              document.addEventListener(
+                "pjax:success",
+                function () {
+                  document
+                    .querySelectorAll(".accordion__fold")
+                    .forEach(initAccordionFold);
+                  closeAllFolds();
+                },
+                { once: true }
+              );
+
+              window.addEventListener("resize", function () {
+                this.document
+                  .querySelectorAll(".accordion__fold")
+                  .forEach(function (fold) {
+                    if (fold.classList.contains("accordion__fold--closed"))
+                      return;
+                    const body = fold.querySelector(".accordion__foldBody");
+                    body.style.height =
+                      body.firstElementChild.getBoundingClientRect().height +
+                      "px";
+                  });
+              });
+            })();
+          </script>
+
+          <div class="bg--sunset2 color--cotton">
+            <div class="helpPage content contentgrid relative pt6 md:pt0">
+              <section
+                class="col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-2 lg:col-span-10 md:mt9"
+                style="min-width: 0"
+              >
+                <h1 id="common-questions" class="h2 mb6">Загальні питання</h1>
+              </section>
+              <div
+                class="lg:mt10 font-body-lg col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-15 lg:col-span-8"
+              >
+                <div class="mb9 lg:mb10 lg:mt9">
+                  <div class="helpPage__description">
+                    <div class="richtext">
+                      <p>
+                        Ми знаємо, що купити прикраси – це непроста справа, і ми
+                        залюбки відповімо на будь-які Ваші запитання. Якщо Ви не
+                        знайшли своє питання нижче, будь ласка
+                        <a href="contacts.html" title="">зверніться до нас</a> і
+                        ми спробуємо Вам допомогти.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <section id="earthfoam-the-foam" class="mb8">
+                  <h2 class="h6 mt4 mb4">Замовлення</h2>
+                  <div class="mb4">
+                    <div class="accordion mt1">
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">Як замовити прикрасу?</h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              Якщо Ви бажаєте придбати прикрасу будь ласка
+                        <a href="contacts.html" title="">зверніться до нас</a> і
+                        щоб узгодити всі деталі придбання. Поміж іншого ми проконсультуємо Вас про наявність готового виробу або узгодимо строк виготовлення.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">Який строк виготовлення прикраси?</h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              Строк виготовлення прикраси в першу чергу залежить від наявності складових елементів. Оскільки всі без виключення прикраси виготовляються власноруч дизайнером, а елементи підбираються з наявних або виробляються спеціально під кожне замовлення, строк може сягати 10 робочиз днів. Ми зацікавлені якомога швидше задовольнити Ваше бажання.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">Чи можу я замовити прикрасу в Instagram?</h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              Так, звісно, замовлення також приймаються на нашій сторінці в Instagram.
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="payment" class="mb8">
+                  <h2 class="h6 mt4 mb4">Оплата</h2>
+                  <div class="mb4">
+                    <div class="accordion mt1">
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Як я можу сплатити за прикрасу?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              Ви можете обрати переказ на банківську карту або
+                              накладений платіж.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </section>
+                <section id="shipping" class="mb8">
+                  <h2 class="h6 mt4 mb4">Доставка</h2>
+                  <div class="mb4">
+                    <div class="accordion mt1">
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Коли я отримаю свою прикрасу?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              Необхідно уточнити у нас наявність готового
+                              виробу. Якщо в наявності - відправимо протягом 1-2
+                              днів, якщо потрібно виготовляти - при узгоджені
+                              деталей покупки повідомимо строк готовності
+                              виробу.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Звідки буде відправлено прикрасу?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              Ми розташовані у Київській агломерації (замістя).
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Хто оплачує послуги служби доставки?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>За послуги служби доставки сплачує покупець.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Чи можна обрати службу доставки?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>Ви можете обрати Нову Пошту або Укрпошту.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Чи можлива доставка на умовах накладеного платежу?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              Так, можлива доставка прикраси на умовах
+                              накладеного платежу. Однак відправка відбудеться
+                              після мінімального авансового платежу за прикрасу,
+                              зазвичай в розмірі вартості послуг доставки.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section id="returns" class="mb8">
+                  <h2 class="h6 mt4 mb4">Повернення</h2>
+                  <div class="mb4">
+                    <div class="accordion mt1">
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Чи можу я повернути прикрасу?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              Якщо отриманий виріб не відповідає погодженим
+                              деталям, не відповідає "живому" фото або
+                              пошкоджений при доставці, покупцю необхідно одразу
+                              <a href="contacts.html" title=""
+                                >звернутися до нас</a
+                              >
+                              і надати відповідні підтвердження. Запевняємо, ми
+                              знайдемо прийнятний варіант щоб покупець залишився
+                              задоволеним. Для уникнення непорозумінь звертаємо
+                              Вашу увагу, що згідно Постанови КМУ від 19 березня
+                              1994 р. N 172 "Про реалізацію окремих положень
+                              Закону України "Про захист прав споживачів",
+                              ювелірні вироби з дорогоцінних металів,
+                              дорогоцінного каміння, дорогоцінного каміння
+                              органогенного утворення та напівдорогоцінного
+                              каміння включено до переліку товарів належної
+                              якості, що не підлягають обміну (поверненню).
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Чи можна обміняти прикрасу?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              За загальним правилом виріб може бути замінено на
+                              аналогічний, якщо отриманий не відповідає
+                              заявленим критеріям або пошкоджено при доставці.
+                              Заміна виробу на зовсім інший не передбачена. В
+                              той же час, за можливості ми знайдемо прийнятний
+                              варіант вирішення будь-якої ситуації.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+                <section id="products" class="mb8">
+                  <h2 class="h6 mt4 mb4">Вироби</h2>
+                  <div class="mb4">
+                    <div class="accordion mt1">
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Як виробляються прикраси?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              Наші прикраси виробляються власноруч дизайнером (hand made).
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Де можна оглянути готові вироби?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                              Враховуючи, що всі прикраси виготовляються власноруч 
+                              дизайнером у творчому процесі, наразі весь асортимент 
+                              не може бути представлений у жодному магазині або шоурумі. 
+                              Деякі вироби Ви можете оглянути і придбати у Вишгороді в салоні "Квітка Стайл".
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                           Де продаються вироби OkrasaBrand?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>Наші прикраси пропонуються до продажу виключно на цьому сайті, на нашій сторінці в Instsgram, а також деякі вироби Ви можете оглянути і придбати у Вишгороді в салоні "Квітка Стайл".</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="accordion__fold bb1--gray3 pt3 pb3 accordion__fold--closed"
+                        role="button"
+                        aria-expanded="false"
+                        tabindex="0"
+                      >
+                        <header
+                          class="accordion__foldHeader flex justify-between cursor-pointer"
+                        >
+                          <h3 class="font-body-lg">
+                            Які матеріали використані у прикрасах OkrasaBrand?
+                          </h3>
+                          <div class="accordion__triangle mr2 ml1">
+                            <svg
+                              width="10"
+                              height="10"
+                              viewBox="0 0 10 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M4.8001 8L0.643175 2L8.95702 2L4.8001 8Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                        </header>
+                        <div
+                          class="accordion__foldBody overflow-h font-body-md font-weight-lt"
+                          style="transition: height 0.5s ease 0s; height: 0px"
+                        >
+                          <div class="richtext">
+                            <p>
+                               У прикрасах використовуються власноруч виготовлені дизайнером елементи, а також готові елементи найвищої якості авторитетних виробників, перевірені осотбисто дизайнером. Будь-який елемент у прикрасі відповідає всім екологічним та санітарним нормам. Ми дбаємо про здоров'я наших клієнтів.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <ol
+                class="helpPage__anchorBlock hidden lg:block font-body-md mt4 mb4 sticky col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-2 lg:col-span-10"
+              >
+                <li
+                  class="mb2 helpPage__anchorLink underline helpPage__anchorLink--active"
+                >
+                  <a href="#common-questions">Загальне</a>
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#earthfoam-the-foam">Замовлення</a>
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#payment">Оплата</a>
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#shipping">Доставка</a>
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#returns">Повернення</a>
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#products">Вироби</a>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <script>
+            "use strict";
+            (function () {
+              let observer;
+              document.addEventListener("pjax:success", function () {
+                const sections = document.querySelectorAll(
+                  ".helpPage section[id], .helpPage h1[id]"
+                );
+                if (observer) observer.disconnect();
+                observer = new IntersectionObserver(function (entries) {
+                  for (const entry of entries) {
+                    const id = entry.target.getAttribute("id");
+                    const anchorLink = document.querySelector(
+                      `.helpPage__anchorLink [href="#${id}"]`
+                    );
+                    if (anchorLink) {
+                      anchorLink.parentElement.classList.toggle(
+                        "helpPage__anchorLink--active",
+                        entry.isIntersecting
+                      );
+                    }
+                  }
+                });
+
+                sections.forEach((sec) => {
+                  observer.observe(sec);
+                });
+              });
+            })();
+          </script>
+        </main>
+        <footer>
+          <a href="shipping-and-returns.html">
+            <div
+              class="marquee marquee--linked block overflow-h color--white bg--black bb1--gray1"
+            >
+              <div
+                class="marquee__container inline-block whitespace-nowrap"
+                style="animation-duration: 17s"
+              >
+                <span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Доставка Новою Поштою або Укрпоштою</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Накладений платіж</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >У Києві можлива доставка кур'єром</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Гарантія задоволення</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Доставка Новою Поштою або Укрпоштою</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Накладений платіж</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >У Києві можлива доставка кур'єром</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Гарантія задоволення</span
+                >
+              </div>
+            </div>
+          </a>
+          <div class="bg--black color--white pt5 pb5">
+            <div class="relative content contentgrid">
+              <div
+                class="footerGrid col-start-1 col-span-12 md:col-start-2 md:col-span-22"
+              >
+                <div class="footerGrid__emailForm mb8 lg:mb0">
+                  <h2 class="font-body-lg mb4">
+                    Підписатися на новини та персональні пропозиції
+                  </h2>
+                  <script>
+                    function handleNewsletterSubmit(event) {
+                      event.preventDefault();
+                      const input = event.target.querySelector(
+                        'input[type="email"]'
+                      );
+                      const group =
+                        event.target.querySelector('input[name="g"]');
+                      const button = event.target.querySelector("button");
+                      const submit = button.querySelector(
+                        ".newsletter__submit"
+                      );
+                      const processing = button.querySelector(
+                        ".newsletter__processing"
+                      );
+                      const success = button.querySelector(
+                        ".newsletter__success"
+                      );
+
+                      function onError() {
+                        alert(
+                          "There was an error with your signup. Please try again later."
+                        );
+                        input.disabled = false;
+                        button.disabled = false;
+                        processing.classList.add("hidden");
+                        submit.classList.remove("hidden");
+                      }
+
+                      input.disabled = true;
+                      button.disabled = true;
+                      submit.classList.add("hidden");
+                      processing.classList.remove("hidden");
+
+                      // --- Tracking --- //
+                      window.dataLayer.push({
+                        event: "emailSubmit",
+                        email: input.value,
+                        group: group.value,
+                        timezoneOffset: new Date().getTimezoneOffset(),
+                      });
+                      // --- Tracking --- //
+
+                      fetch(event.target.dataset.ajaxAction, {
+                        method: "POST",
+                        headers: {
+                          "Access-Control-Allow-Headers": "*",
+                          "Content-Type":
+                            "application/x-www-form-urlencoded; charset=utf-8",
+                        },
+                        body: new URLSearchParams({
+                          email: input.value,
+                          g: group.value,
+                          $timezone_offset: new Date().getTimezoneOffset(),
+                        }),
+                        cache: "no-store",
+                      })
+                        .then(function (resp) {
+                          if (!resp.ok) throw new Error(resp);
+                          return resp.json();
+                        })
+                        .then(function (resp) {
+                          if (!resp.success) throw new Error(resp);
+
+                          processing.classList.add("hidden");
+                          success.classList.remove("hidden");
+                          button.classList.remove("opacity--disabled");
+                        })
+                        .catch(function (e) {
+                          onError();
+                        });
+                    }
+                  </script>
+                  <form
+                    class="flex flex-row color--white font-body-lg"
+                    method="GET"
+                    action="https://manage.kmail-lists.com/subscriptions/subscribe"
+                    data-ajax-action="https://manage.kmail-lists.com/ajax/subscriptions/subscribe"
+                    onsubmit="handleNewsletterSubmit(event);"
+                  >
+                    <input type="hidden" name="g" value="RePdxG" />
+                    <input
+                      class="grow p2 opacity--disabled"
+                      type="email"
+                      placeholder="Email address"
+                      name="email"
+                      autocomplete="off"
+                    />
+                    <button
+                      aria-label="submit"
+                      class="p2 cursor-pointer color--white flex items-center justify-center opacity--disabled"
+                    >
+                      <span class="newsletter__submit"
+                        ><svg
+                          width="15"
+                          height="12"
+                          viewBox="0 0 15 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="newsletter__processing hidden"
+                        ><svg
+                          width="19"
+                          height="3"
+                          viewBox="0 0 19 3"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="9.5"
+                            cy="1.5"
+                            r="1.5"
+                            fill="currentColor"
+                          ></circle>
+                          <circle
+                            cx="17.5"
+                            cy="1.5"
+                            r="1.5"
+                            fill="currentColor"
+                          ></circle>
+                          <circle
+                            cx="1.5"
+                            cy="1.5"
+                            r="1.5"
+                            fill="currentColor"
+                          ></circle>
+                        </svg>
+                      </span>
+                      <span class="newsletter__success hidden"
+                        ><svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.34615 8.5L5.84627 13L15.0001 4"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+                </div>
+                <nav class="footerGrid__nav mb8 lg:mb0">
+                  <a class="mb3 md:mb0 lg:mr3" href="products.html">Магазин</a>
+                  <a class="mb3 md:mb0 lg:mr3" href="about.html">Про нас</a>
+                  <!-- <a class="mb3 md:mb0 lg:mr3" href="/gallery">Галерея</a> -->
+                  <a class="mb3 md:mb0 lg:mr3" href="shipping-and-returns.html"
+                    >Доставка і повернення</a
+                  >
+                  <a
+                    class="mb3 md:mb0 lg:mr3 footerNav__link flex items-center"
+                    href="contacts.html"
+                    ><span>Контакти</span></a
+                  >
+                  <a class="mb3 md:mb0 lg:mr3" href="/privacy-policy"
+                    >Конфіденційнійсть</a
+                  >
+                  <a class="mb3 md:mb0 lg:mr3" href="/terms-of-service"
+                    >Умови користування</a
+                  >
+                </nav>
+
+                <div class="footerGrid__social mb5 flex flex-col mb8 lg:mb0">
+                  <div class="flex flex-row mb4">
+                    <a
+                      class="mr3"
+                      href="https://instagram.com/okrasa.brand"
+                      target="_blank"
+                    >
+                      <svg class="footer-icon" width="22" height="22">
+                        <use href="./img/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="font-body-sm">
+                    <p style="margin-bottom: 5px">
+                      Copyright © 2023 Okrasa brand
+                    </p>
+                    <p>All Rights Reserved.</p>
+                  </div>
+                </div>
+
+                <div
+                  class="footerGrid__sinhala overflow-h flex flex-col md:flex-row justify-between relative"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div id="bodyTail">
+      <div
+        id="lightbox"
+        class="modal flex items-center justify-center fixed t0 l0 r0 b0"
+        style="display: none"
+      >
+        <div class="modal__background absolute t0 l0 r0 b0"></div>
+        <div class="modal__content brad--1 bg--white relative flex flex-col">
+          <header class="p2 tr">
+            <button class="cursor-pointer color--black" aria-label="Close">
+              ×
+            </button>
+          </header>
+          <div
+            class="scroll-y modal__body"
+            data-img-class="w-contained h-contained h-auto fit--contain p2 mb2"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" defer src="./js/main.js"></script>
+    <script type="module" defer src="./js/pjax@2.4.0.min.js"></script>
+    <script src="./node_modules/pjax/pjax.js"></script>
+    <script type="module" defer src="./js/storefront.js"></script>
+  </body>
+</html>
