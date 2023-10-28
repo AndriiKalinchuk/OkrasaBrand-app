@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OkrasaBrand - terms of service</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg--cotton">
+    <div id="menu">
+      <div
+        id="menu__bar"
+        class="color--cotton bg--black flex flex-row md:flex-col justify-between items-center md:pb3"
+      >
+        <a href="/" class="hidden md:block"
+          ><img
+            src="./img/desktop/logo-red-en.jpg"
+            alt="Окраса"
+            class="w-full h-auto"
+            width="161"
+            height="156"
+        /></a>
+        <div class="cursor-pointer menu__toggle" onclick="window.menuToggle();">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="27.5303"
+              y1="4.53033"
+              x2="4.90291"
+              y2="27.1577"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></line>
+            <line
+              x1="27.5303"
+              y1="4.53033"
+              x2="4.90291"
+              y2="27.1577"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></line>
+            <line
+              x1="27.4697"
+              y1="27.5303"
+              x2="4.84225"
+              y2="4.90291"
+              stroke="currentColor"
+              stroke-width="1.5"
+            ></line>
+          </svg>
+          <!-- <svg class="burger-icon" width="32" height="32">
+            <use href="./img/icons.svg#icon-menu-hamburger"></use>
+          </svg> -->
+        </div>
+        <a href="/" class="md:hidden"
+          ><img
+            src="./img/desktop/logo-white.jpg"
+            alt="Окраса"
+            id="menu__mobileLogo"
+            class="text-center"
+            width="389"
+            height="124"
+            style="height: 32px; width: auto"
+        /></a>
+        <a
+          href="/cart"
+          id="menu__cartButton"
+          class="relative bg--cotton color--black flex items-center justify-center"
+        >
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Cart</title>
+            <path
+              d="M1.86644 11.2C2.3819 11.2 2.79977 10.7822 2.79977 10.2667C2.79977 9.75124 2.3819 9.33337 1.86644 9.33337C1.35097 9.33337 0.933105 9.75124 0.933105 10.2667C0.933105 10.7822 1.35097 11.2 1.86644 11.2Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M9.33324 11.2C9.8487 11.2 10.2666 10.7822 10.2666 10.2667C10.2666 9.75124 9.8487 9.33337 9.33324 9.33337C8.81777 9.33337 8.3999 9.75124 8.3999 10.2667C8.3999 10.7822 8.81777 11.2 9.33324 11.2Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M10.7334 7.46683H1.22183L1.6885 6.5335H8.86677C8.95997 6.53348 9.05102 6.50555 9.12821 6.45332C9.20539 6.40109 9.26517 6.32694 9.29984 6.24043L11.1665 1.57376C11.1949 1.50296 11.2055 1.42628 11.1973 1.35043C11.1892 1.27459 11.1626 1.20189 11.1199 1.13871C11.0771 1.07552 11.0196 1.02378 10.9522 0.988005C10.8848 0.952229 10.8097 0.933514 10.7334 0.933496H1.5933L0.797168 0.136429C0.709541 0.0488014 0.590692 -0.000427246 0.466768 -0.000427246C0.342844 -0.000427246 0.223995 0.0488014 0.136368 0.136429C0.0487404 0.224057 -0.000488281 0.342905 -0.000488281 0.466829C-0.000488281 0.590753 0.0487404 0.709602 0.136368 0.797229L0.933435 1.59336V5.9567L0.0495679 7.72443C0.0139161 7.79558 -0.00294925 7.87466 0.000574618 7.95416C0.00409849 8.03367 0.0278945 8.11095 0.0697012 8.17866C0.111508 8.24637 0.169936 8.30227 0.239434 8.34104C0.308931 8.37981 0.387188 8.40016 0.466768 8.40017H10.7334C10.8572 8.40017 10.9759 8.351 11.0634 8.26348C11.1509 8.17597 11.2001 8.05727 11.2001 7.9335C11.2001 7.80973 11.1509 7.69103 11.0634 7.60352C10.9759 7.516 10.8572 7.46683 10.7334 7.46683Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+
+          <!-- <div id="menu__cartIndicator" class="bg--sunset2 absolute"></div> -->
+        </a>
+      </div>
+
+      <nav
+        id="menu__content"
+        class="color--cotton bg--black h-full flex flex-col lg:justify-between scroll-y"
+      >
+        <ul class="font-menu-lg" style="flex-grow: 4">
+          <li class="mb3"><a href="products.html">Магазин</a></li>
+          <li class="mb3"><a href="about.html">Про нас</a></li>
+          <!-- <li class="mb3"><a href="/gallery">Галерея</a></li> -->
+        </ul>
+        <ul class="font-menu-sm mt5 mb5" style="flex-grow: 1">
+          <li class="mb3"><a href="production.html">How it's made</a></li>
+          <li class="mb3">
+            <a href="shipping-and-returns.html">Доставка і повернення</a>
+          </li>
+          <li class="mb3">
+            <a href="common-questions.html">Загальні питання</a>
+          </li>
+
+          <li class="mb3">
+            <a href="contacts.html" class="flex items-center nav__link"
+              ><span>Контакти</span></a
+            >
+          </li>
+        </ul>
+        <footer>
+          <div class="mb3 flex">
+            <a
+              href="https://instagram.com/okrasa.brand"
+              target="_blank"
+              class="mr3"
+              ><svg class="footer-icon" width="22" height="22">
+                <use href="./img/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="font-body-sm font-weight-lt">
+            Copyright © 2023 Okrasa brand. All rights reserved.
+          </p>
+        </footer>
+      </nav>
+    </div>
+    <div
+      class="featuredProductTags hidden lg:inline-flex flex-row"
+      onmouseleave="window.__featuredProductHoverTimeout = setTimeout(() => { this.classList.remove('featuredProductTags--open'); }, 1000);"
+      style="opacity: 1; transition: opacity 1s ease 0s"
+    >
+      <button
+        aria-label="product menu"
+        class="button button--smallRound featuredProductTags__toggle flex items-center font-cta-sm"
+        onmouseenter="clearTimeout(window.__featuredProductHoverTimeout); this.parentElement.classList.add('featuredProductTags--open');"
+      >
+        <svg
+          width="19"
+          height="3"
+          viewBox="0 0 19 3"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="9.5" cy="1.5" r="1.5" fill="currentColor"></circle>
+          <circle cx="17.5" cy="1.5" r="1.5" fill="currentColor"></circle>
+          <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor"></circle>
+        </svg>
+      </button>
+
+      <div class="featuredProductTags__tags flex flex-row">
+        <a
+          href="/products/earrings"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Кульчики</a
+        >
+        <a
+          href="/products/necklaces"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Намисто</a
+        >
+        <a
+          href="/products/bracelets"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Браслети</a
+        >
+        <a
+          href="/products/rings"
+          class="button button--small font-cta-sm"
+          onclick="this.parentElement.classList.remove('featuredProductTags--open');"
+          >Кільця</a
+        >
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+      (function () {
+        let observer;
+        document.addEventListener("pjax:success", function () {
+          const hero = document.querySelector(".homeHero");
+          if (!hero) return;
+
+          const tags = document.querySelector(".featuredProductTags");
+          if (observer) observer.disconnect();
+          observer = new IntersectionObserver(function (entries) {
+            for (const entry of entries) {
+              tags.classList.toggle(
+                "featuredProductTags--forceOpen",
+                entry.isIntersecting
+              );
+            }
+          });
+
+          observer.observe(hero);
+        });
+      })();
+    </script>
+
+    <div id="body__contentWrapper">
+      <div id="body__content">
+        <main>
+          <script>
+            "use strict";
+            (function () {
+              function closeAllFolds(exclude) {
+                document.querySelectorAll(".accordion__fold").forEach((f) => {
+                  if (f == exclude) return;
+                  f._toggle(false);
+                });
+              }
+
+              function initAccordionFold(fold) {
+                const body = fold.querySelector(".accordion__foldBody");
+                fold._toggle = function (open) {
+                  if (open == undefined)
+                    open = fold.classList.contains("accordion__fold--closed");
+                  if (open == true) closeAllFolds(fold);
+
+                  fold.classList.toggle("accordion__fold--closed", !open);
+                  fold.setAttribute("aria-expanded", open);
+                  body.style.transition = "height 0.5s";
+                  if (!open) {
+                    body.style.height = "0px";
+                  } else {
+                    body.style.height =
+                      body.firstElementChild.getBoundingClientRect().height +
+                      "px";
+                  }
+                };
+                fold.addEventListener("click", function () {
+                  fold._toggle();
+                });
+                fold.addEventListener("keydown", function (event) {
+                  if (
+                    event instanceof KeyboardEvent &&
+                    event.key !== "Enter" &&
+                    event.key !== " "
+                  )
+                    return;
+                  fold._toggle();
+                  event.preventDefault(); // prevent space key from scrolling downwards
+                });
+              }
+
+              document.addEventListener(
+                "pjax:success",
+                function () {
+                  document
+                    .querySelectorAll(".accordion__fold")
+                    .forEach(initAccordionFold);
+                  closeAllFolds();
+                },
+                { once: true }
+              );
+
+              window.addEventListener("resize", function () {
+                this.document
+                  .querySelectorAll(".accordion__fold")
+                  .forEach(function (fold) {
+                    if (fold.classList.contains("accordion__fold--closed"))
+                      return;
+                    const body = fold.querySelector(".accordion__foldBody");
+                    body.style.height =
+                      body.firstElementChild.getBoundingClientRect().height +
+                      "px";
+                  });
+              });
+            })();
+          </script>
+
+          <div class="bg--sunset2 color--cotton">
+            <div class="helpPage content contentgrid relative pt6 md:pt0">
+              <section
+                class="col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-2 lg:col-span-10 md:mt9"
+                style="min-width: 0"
+              >
+                <h1 id="privacy-policy" class="h2 mb6">
+                  Правила користування сайтом
+                </h1>
+              </section>
+              <div
+                class="lg:mt10 font-body-lg col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-15 lg:col-span-8"
+              >
+                <div class="mb9 lg:mb10 lg:mt9">
+                  <div class="helpPage__description">
+                    <div class="richtext">
+                      <p>
+                        Якщо Ви вирішили користуватися Сайтом та додатками
+                        Сайту, включаючи RSS, API, програмним забезпеченням та
+                        іншими файлами, Ви даєте згоду на дотримання всіх умов,
+                        викладених у цих Правилах користування сайтом (далі –
+                        «Правила»), у тому числі, шляхом реєстрації на Сайті
+                        свого облікового запису (аккаунту). Ці Правила є
+                        юридично обов'язковою угодою між користувачем і
+                        OkrasaBrand, предметом якої є надання користувачеві
+                        послуг з використання Сайту і його сервісів.
+                      </p>
+                      <p>
+                        Ми можемо у будь-який час змінювати умови, викладені в
+                        цих Правилах, і такі зміни набирають чинності негайно
+                        після їх оприлюднення на Сайті.
+                      </p>
+                      <p>
+                        Ви зобов’язані ознайомлюватися з цими Правилами перед
+                        кожним користуванням Сайтом. Якщо Ви продовжуєте
+                        користуватися Сайтом після оприлюднення змінених Правил,
+                        це означає Вашу згоду на дотримання Правил з усіма його
+                        змінами.
+                      </p>
+                      <p>
+                        Якщо будь-які умови цих Правил або зміни до них
+                        неприйнятні для Вас, Ви можете не розпочинати
+                        користування Сайтом або припинити дію Вашого облікового
+                        запису у порядку, визначеному розділом 8 Правил.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <section id="site-content" class="mb8">
+                  <h2 class="h6 mt4 mb4 pt4 bt1--white">Контент Сайту</h2>
+                  <div class="mb4">
+                    <div class="richtext">
+                      <p>
+                        Матеріали, опубліковані на Сайті, призначені для Вашого
+                        особистого некомерційного використання. Всі матеріали,
+                        опубліковані на Сайті, включаючи, але не обмежуючись:
+                        фотографії, зображення, ілюстрації, аудіо-та відео кліпи
+                        (далі – «матеріали» або «контент») захищені авторським
+                        правом і знаходяться у володінні або під контролем
+                        OkrasaBrand або сторони, яка є постачальником контенту.
+                        Ви повинні дотримуватися всіх додаткових повідомлень про
+                        авторські права, інформації або обмежень, що містяться
+                        на будь-якій сторінці.
+                      </p>
+                      <p>
+                        Зміст Сайту захищений авторським правом відповідно до
+                        законодавства України та міжнародного авторського права.
+                        Ви не маєте права змінювати, публікувати, передавати,
+                        брати участь у передачі або продажу, відтворювати (за
+                        винятком випадків, передбачених цих Правилах),
+                        створювати нові твори, поширювати, виконувати, або
+                        яким-небудь чином використовувати зміст Сайту (включаючи
+                        програмне забезпечення) в цілому або частково.
+                      </p>
+                      <p>
+                        Комерційні (фірмові) найменування, торговельні марки,
+                        тощо OkrasaBrand або третіх осіб, захищені авторськими
+                        правами. Ніщо, зазначене в цих Правилах, не може
+                        тлумачитися як надання опосередковано, за замовчуванням
+                        або іншим шляхом будь-якої ліцензії або права на
+                        використання торговельної марки, патенту, прав на дизайн
+                        або авторських прав OkrasaBrand або третіх осіб.
+                      </p>
+                      <p>
+                        Ви можете завантажити або скопіювати вміст Сайту, інші
+                        компоненти та елементи, що відображаються на Сайті,
+                        тільки для особистого використання, за умови дотримання
+                        всіх авторських прав та інших повідомлень, що містяться
+                        в ньому. Копіювання чи зберігання будь-якого контенту
+                        для відмінних від особистого використання суворо
+                        забороняється без попередньої письмової згоди
+                        OkrasaBrand.
+                      </p>
+                      <p>
+                        Інтернет-виданням, мобільним додаткам дозволяється
+                        безкоштовно використовувати інформацію, розміщену на
+                        Сайті, за умови відкритого гіперпосилання та згадки
+                        першоджерела не нижче першого абзацу і обсягом не більше
+                        100 знаків оригінального тексту. Використання більшого
+                        обсягу тексту можливе лише за умови отримання письмового
+                        дозволу OkrasaBrand. Для SmartTV використання матеріалів
+                        OkrasaBrand дозволяється на платній основі та лише за
+                        письмової згоди OkrasaBrand. Іншим видам ЗМІ
+                        дозволяється використовувати інформацію, розміщену на
+                        Сайті , обсягом до 200 знаків, за умови посилання на
+                        першоджерело. Використання більшого обсягу тексту
+                        можливе лише за умови отримання письмового дозволу
+                        OkrasaBrand. Під використанням інформації мається на
+                        увазі будь-яке відтворення, републікація, поширення,
+                        переробка, переклад, включення його частин до інших
+                        творів та інші способи, передбачені Законом України «Про
+                        авторське право і суміжні права». OkrasaBrand надає
+                        письмовий дозвіл на використання своїх матеріалів третім
+                        особам на свій розсуд на підставі звернення,
+                        направленого в електронній формі на email, із
+                        обов’язковим зазначенням зворотної поштової адреси.
+                        OkrasaBrand залишає за собою право в процесі розгляду
+                        звернення вимагати від третіх осіб будь-яку додаткову
+                        інформацію, необхідну для прийняття рішення про видачу
+                        письмового дозволу. Використання матеріалів OkrasaBrand
+                        можливе тільки після отримання третьою особою
+                        відповідного письмового дозволу.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section id="users-content" class="mb8">
+                  <h2 class="h6 mt4 mb4 pt4 bt1--white">
+                    Контент користувачів
+                  </h2>
+                  <div class="mb4">
+                    <div class="richtext">
+                      <p>
+                        Ви погоджуєтесь користуватися Сайтом виключно с законною
+                        метою та таким чином, щоб не порушувати права інших
+                        користувачів, не обмежувати та не перешкоджати доступу
+                        інших до Сайту та користуванню ним.
+                      </p>
+                      <p>
+                        Не дозволяється завантажувати, розповсюджувати та
+                        публікувати контент будь-якого наклепницького,
+                        образливого, непристойного, порнографічного чи іншого
+                        незаконного матеріалу; рекламні прояви, комерційні
+                        повідомлення, а також повідомлення, які не мають
+                        інформаційного навантаження і не стосуються тематики
+                        ресурсу.
+                      </p>
+                      <p>
+                        Будьте ввічливі. Ви погоджуєтесь, що не будете
+                        погрожувати або ображати інших користувачів,
+                        використовуючи наклепницькі прийоми, або свідомо
+                        публікувати повідомлення з повторювальним змістом
+                        (спам). Користуйтеся шанобливою мовою. Онлайн-бесіда
+                        продовжуватиметься тільки тоді, коли наші користувачі
+                        відчують себе бажаними та в безпеці. Ви погоджуєтесь не
+                        використовувати мову, яка зловживає або розрізняє на
+                        підставі раси, релігії, національності, роду,
+                        сексуальних переваг, віку, регіону, інвалідності і т.п.
+                        Ворожнеча будь-якого роду є підставою для негайного
+                        призупинення доступу до всього Сайту або його частини.
+                      </p>
+                      <p>
+                        Ви надаєте OkrasaBrand, безстрокову, невиключну, по
+                        всьому світу, роялті-фрі, ліцензію на
+                        розміщені/надіслані/поширені Вами матеріали на Сайті,
+                        включаючи передачу OkrasaBrand або будь-якій третій
+                        стороні необмежене право на використання, копіювання,
+                        передання, публікацію, поширення, створення похідних
+                        робіт, змінення і адаптування індексу, кеша, тегів,
+                        кодування (включаючи без обмеження права на адаптацію до
+                        потокового завантаження, передачі, мобільного, цифрового
+                        сканування або інших технологій) в будь-якій формі,
+                        відомій зараз або в розроблені подальшому
+                      </p>
+                      <p>
+                        Ви несете повну відповідальність за зміст Ваших
+                        публікацій. OkrasaBrand не може контролювати кожен
+                        матеріал і не несе відповідальності за зміст цих
+                        повідомлень, Ми залишаємо за собою право видаляти,
+                        переміщати або редагувати статті, які OkrasaBrand, на
+                        власний розсуд, вважає образливими, наклепницькими,
+                        непристойними або неприйнятними, які порушують авторські
+                        права і товарні знаки.
+                      </p>
+                      <p>
+                        Ви даєте згоду на відображення і публікацію на Сайті
+                        розробленого Вами матеріалу, а також в рекламних цілях
+                        за межами Сайту.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section id="assurances" class="mb8">
+                  <h2 class="h6 mt4 mb4 pt4 bt1--white">Заяви та гарантії</h2>
+                  <div class="mb4">
+                    <div class="richtext">
+                      <p> Ви запевнюєте, гарантуєте та обіцяєте (а), що
+                        матеріали будь-якого роду, представлені через Ваш
+                        аккаунт (І) не будуть порушені, плагіатом або порушувати
+                        права третіх осіб, включаючи авторське право, товарні
+                        знаки, недоторканність приватного життя або інших
+                        особистих або майнових прав, або (II) містити наклепи чи
+                        інший незаконний матеріал, а також (б), Ви щонайменше
+                        досягнули вісімнадцяти років. 
+                    </p>
+                    <p>Цим Ви гарантуєте, що 
+                        відшкодуєте збитки, захистите та убезпечите OkrasaBrand
+                        та всіх посадових осіб, директорів, власників, агентів,
+                        постачальників інформації, афілійованих осіб,
+                        ліцензіарів і ліцензіатів від будь-якої відповідальності
+                        і витрат, включаючи судові витрати, що були понесені у
+                        зв'язку з будь-яким позовом, що спричинений порушенням
+                        цих Правил, гарантій і угод Вами або будь-яким
+                        користувачем Вашого аккаунта. Ви повинні розумно
+                        співпрацювати на захист будь-якого такого позову.
+                        OkrasaBrand залишає за собою право за свій рахунок
+                        прийняти на себе винятковий захист і контроль будь-якого
+                        питання, які вимагають компенсації від Вас.
+                    </p>
+                    </div>
+                  </div>                
+                <section id="relationship" class="mb8">
+                  <h2 class="h6 mt4 mb4 pt4 bt1--white">
+                    Зв'язок між Сайтом і користувачами
+                  </h2>
+                  <div class="mb4">
+                    <div class="richtext">
+                      <p> Якщо Ви заповнюєте реєстраційну форму з метою
+                        отримання певної інформації, Ви надаєте, а OkrasaBrand
+                        залишає за собою право відправляти на Вашу електронну
+                        пошту інформацію про зміни або доповнення послуг на
+                        Сайті. 
+                    </p>
+                    <p>OkrasaBrand залишає за собою право
+                        розкривати інформацію про використання та демографію за
+                        умови, що це не буде розкривати Вашу особистість.
+                        Рекламодавці на сайті можуть збирати і поширювати
+                        особисту інформацію про Вас, тільки якщо Ви
+                        підтверджуєте свою згоду відповідно до Політики
+                        конфіденційності та захисту персональних даних
+                        OkrasaBrand.
+                    </p> 
+                    <p> OkrasaBrand може зв'язатися з Вами по
+                        електронній пошті про Вашу участь в опитуванні
+                        користувачів, задаючи питання з метою покращення
+                        сервісів. Ця інформація
+                        буде використана для покращення роботи Сайту і для
+                        кращого розуміння наших користувачів. Будь-яка
+                        інформація, яку ми отримуємо в таких опитуваннях, не
+                        буде передана третім особам, за винятком узагальнених
+                        знеособлених даних.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section id="soft-licenses" class="mb8">
+                  <h2 class="h6 mt4 mb4 pt4 bt1--white">
+                    Ліцензії та програмне забезпечення
+                  </h2>
+                  <div class="mb4">
+                    <div class="richtext">
+                      <p>
+                        Ви не маєте ніяких прав на пропрієтарне програмне
+                        забезпечення та супровідну документацію, або на будь-які
+                        поліпшення або зміни до них («програмне забезпечення»),
+                        якщо у Вас не має доступу до Сайту. Ви не можете
+                        субліцензувати, поступатися або передавати будь-які
+                        ліцензії, надані OkrasaBrand, і будь-яка спроба такого
+                        субліцензування, привласнення або передачі вважається
+                        недійсною та протиправною. Ви можете зробити одну копію
+                        такого програмного забезпечення для архівних цілей. Ви
+                        не можете копіювати, поширювати, змінювати, переробляти,
+                        або створювати похідні роботи від програмного
+                        забезпечення.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section id="restrictions" class="mb8">
+                  <h2 class="h6 mt4 mb4 pt4 bt1--white">
+                    Припинення доступу до Сайту
+                  </h2>
+                  <div class="mb4">
+                    <div class="richtext">
+                      <p> OkrasaBrand, може, на
+                        свій власний розсуд, видалити або призупинити доступ до
+                        всього Сайту або його частини з будь-якої причини,
+                        включаючи, порушення або невиконання цих Правил.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section id="different-conditions" class="mb8">
+                  <h2 class="h6 mt4 mb4 pt4 bt1--white">Різне</h2>
+                  <div class="mb4">
+                    <div class="richtext">
+                      <p>
+                        Ці Правила застосовуються відповідно до
+                        законодавства України. Будь-які спори щодо реалізації
+                        цих Правил будуть вирішуватися відповідним судом, в
+                        порядку, визначеному чинними законодавством України.
+                    </p>
+                    <p>Незважаючи на будь-які положення з вищевикладеного,
+                        нічого в цих Правилах не може використовуватися для
+                        тлумачення положень, зазначених в Політиці
+                        конфіденційності.
+                    </p>
+                    <p>Листування слід здійснювати на
+                        email 
+                    </p> 
+                    <p>Ви погоджуєтесь негайно повідомляти про
+                        будь-які порушення авторських прав щодо матеріалів
+                        Сайту. Про виникнення претензій з Вашого боку щодо
+                        порушення авторських прав стосовно матеріалів, які
+                        містяться на Сайті, повідомляйте на на email.
+                    </p>
+                    <p>
+                        Матеріали можуть містити посилання, пов'язані з іншими
+                        World Wide Web Інтернет-сайтами, ресурсами та
+                        рекламодавцями. Так як Ми не несемо відповідальності за
+                        доступність цих зовнішніх ресурсів або їх зміст, Ви
+                        повинні направляти будь-яке занепокоєння щодо будь-якого
+                        зовнішнього посилання адміністратору такого веб-сайту.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                <section id="advertising" class="mb8">
+                  <h2 class="h6 mt4 mb4 pt4 bt1--white">
+                    Реклама та партнерські матеріали
+                  </h2>
+                  <div class="mb4">
+                    <div class="richtext">
+                      <p>
+                        Матеріали з плашками «реклама», «новини компаній»,                
+                        «партнерський матеріал» публікуються на комерційних або
+                        партнерських засадах. 
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <ol
+                class="helpPage__anchorBlock hidden lg:block font-body-md mt4 mb4 sticky col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-2 lg:col-span-10"
+              >
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#privacy-policy">Загальні положення</a>
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#site-content"
+                    >Контент Сайту</a
+                  >
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#users-content"
+                    >Контент користувачів</a
+                  >
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#assurances"
+                    >Заяви та гарантії</a
+                  >
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#relationship"
+                    >Зв'язок між Сайтом і користувачами</a
+                  >
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#soft-licenses"
+                    >Ліцензії та програмне забезпечення</a
+                  >
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#restrictions">Припинення доступу до Сайту</a>
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#different-conditions">Різне</a>
+                </li>
+                <li class="mb2 helpPage__anchorLink underline">
+                  <a href="#advertising">Реклама та партнерські матеріали</a>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <script>
+            "use strict";
+            (function () {
+              let observer;
+              document.addEventListener("pjax:success", function () {
+                const sections = document.querySelectorAll(
+                  ".helpPage section[id], .helpPage h1[id]"
+                );
+                if (observer) observer.disconnect();
+                observer = new IntersectionObserver(function (entries) {
+                  for (const entry of entries) {
+                    const id = entry.target.getAttribute("id");
+                    const anchorLink = document.querySelector(
+                      `.helpPage__anchorLink [href="#${id}"]`
+                    );
+                    if (anchorLink) {
+                      anchorLink.parentElement.classList.toggle(
+                        "helpPage__anchorLink--active",
+                        entry.isIntersecting
+                      );
+                    }
+                  }
+                });
+
+                sections.forEach((sec) => {
+                  observer.observe(sec);
+                });
+              });
+            })();
+          </script>
+        </main>
+        <footer>
+          <a href="shipping-and-returns.html">
+            <div
+              class="marquee marquee--linked block overflow-h color--white bg--black bb1--gray1"
+            >
+              <div
+                class="marquee__container inline-block whitespace-nowrap"
+                style="animation-duration: 17s"
+              >
+                <span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Доставка Новою Поштою або Укрпоштою</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Накладений платіж</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >У Києві можлива доставка кур'єром</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Гарантія задоволення</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Доставка Новою Поштою або Укрпоштою</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Накладений платіж</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >У Києві можлива доставка кур'єром</span
+                ><span class="marquee__item eyebrow-sm pl4 pr4"
+                  >Гарантія задоволення</span
+                >
+              </div>
+            </div>
+          </a>
+          <div class="bg--black color--white pt5 pb5">
+            <div class="relative content contentgrid">
+              <div
+                class="footerGrid col-start-1 col-span-12 md:col-start-2 md:col-span-22"
+              >
+                <div class="footerGrid__emailForm mb8 lg:mb0">
+                  <h2 class="font-body-lg mb4">
+                    Підписатися на новини та персональні пропозиції
+                  </h2>
+                  <script>
+                    function handleNewsletterSubmit(event) {
+                      event.preventDefault();
+                      const input = event.target.querySelector(
+                        'input[type="email"]'
+                      );
+                      const group =
+                        event.target.querySelector('input[name="g"]');
+                      const button = event.target.querySelector("button");
+                      const submit = button.querySelector(
+                        ".newsletter__submit"
+                      );
+                      const processing = button.querySelector(
+                        ".newsletter__processing"
+                      );
+                      const success = button.querySelector(
+                        ".newsletter__success"
+                      );
+
+                      function onError() {
+                        alert(
+                          "There was an error with your signup. Please try again later."
+                        );
+                        input.disabled = false;
+                        button.disabled = false;
+                        processing.classList.add("hidden");
+                        submit.classList.remove("hidden");
+                      }
+
+                      input.disabled = true;
+                      button.disabled = true;
+                      submit.classList.add("hidden");
+                      processing.classList.remove("hidden");
+
+                      // --- Tracking --- //
+                      window.dataLayer.push({
+                        event: "emailSubmit",
+                        email: input.value,
+                        group: group.value,
+                        timezoneOffset: new Date().getTimezoneOffset(),
+                      });
+                      // --- Tracking --- //
+
+                      fetch(event.target.dataset.ajaxAction, {
+                        method: "POST",
+                        headers: {
+                          "Access-Control-Allow-Headers": "*",
+                          "Content-Type":
+                            "application/x-www-form-urlencoded; charset=utf-8",
+                        },
+                        body: new URLSearchParams({
+                          email: input.value,
+                          g: group.value,
+                          $timezone_offset: new Date().getTimezoneOffset(),
+                        }),
+                        cache: "no-store",
+                      })
+                        .then(function (resp) {
+                          if (!resp.ok) throw new Error(resp);
+                          return resp.json();
+                        })
+                        .then(function (resp) {
+                          if (!resp.success) throw new Error(resp);
+
+                          processing.classList.add("hidden");
+                          success.classList.remove("hidden");
+                          button.classList.remove("opacity--disabled");
+                        })
+                        .catch(function (e) {
+                          onError();
+                        });
+                    }
+                  </script>
+                  <form
+                    class="flex flex-row color--white font-body-lg"
+                    method="GET"
+                    action="https://manage.kmail-lists.com/subscriptions/subscribe"
+                    data-ajax-action="https://manage.kmail-lists.com/ajax/subscriptions/subscribe"
+                    onsubmit="handleNewsletterSubmit(event);"
+                  >
+                    <input type="hidden" name="g" value="RePdxG" />
+                    <input
+                      class="grow p2 opacity--disabled"
+                      type="email"
+                      placeholder="Email address"
+                      name="email"
+                      autocomplete="off"
+                    />
+                    <button
+                      aria-label="submit"
+                      class="p2 cursor-pointer color--white flex items-center justify-center opacity--disabled"
+                    >
+                      <span class="newsletter__submit"
+                        ><svg
+                          width="15"
+                          height="12"
+                          viewBox="0 0 15 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span class="newsletter__processing hidden"
+                        ><svg
+                          width="19"
+                          height="3"
+                          viewBox="0 0 19 3"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="9.5"
+                            cy="1.5"
+                            r="1.5"
+                            fill="currentColor"
+                          ></circle>
+                          <circle
+                            cx="17.5"
+                            cy="1.5"
+                            r="1.5"
+                            fill="currentColor"
+                          ></circle>
+                          <circle
+                            cx="1.5"
+                            cy="1.5"
+                            r="1.5"
+                            fill="currentColor"
+                          ></circle>
+                        </svg>
+                      </span>
+                      <span class="newsletter__success hidden"
+                        ><svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.34615 8.5L5.84627 13L15.0001 4"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+                </div>
+                <nav class="footerGrid__nav mb8 lg:mb0">
+                  <a class="mb3 md:mb0 lg:mr3" href="products.html">Магазин</a>
+                  <a class="mb3 md:mb0 lg:mr3" href="about.html">Про нас</a>
+                  <!-- <a class="mb3 md:mb0 lg:mr3" href="/gallery">Галерея</a> -->
+                  <a class="mb3 md:mb0 lg:mr3" href="shipping-and-returns.html"
+                    >Доставка і повернення</a
+                  >
+                  <a
+                    class="mb3 md:mb0 lg:mr3 footerNav__link flex items-center"
+                    href="contacts.html"
+                    ><span>Контакти</span></a
+                  >
+                  <a class="mb3 md:mb0 lg:mr3" href="privacy-policy.html"
+                    >Конфіденційнійсть</a
+                  >
+                  <a class="mb3 md:mb0 lg:mr3" href="terms-of-service.html"
+                    >Умови користування</a
+                  >
+                </nav>
+
+                <div class="footerGrid__social mb5 flex flex-col mb8 lg:mb0">
+                  <div class="flex flex-row mb4">
+                    <a
+                      class="mr3"
+                      href="https://instagram.com/okrasa.brand"
+                      target="_blank"
+                    >
+                      <svg class="footer-icon" width="22" height="22">
+                        <use href="./img/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="font-body-sm">
+                    <p style="margin-bottom: 5px">
+                      Copyright © 2023 Okrasa brand
+                    </p>
+                    <p>All Rights Reserved.</p>
+                  </div>
+                </div>
+
+                <div
+                  class="footerGrid__sinhala overflow-h flex flex-col md:flex-row justify-between relative"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div id="bodyTail">
+      <div
+        id="lightbox"
+        class="modal flex items-center justify-center fixed t0 l0 r0 b0"
+        style="display: none"
+      >
+        <div class="modal__background absolute t0 l0 r0 b0"></div>
+        <div class="modal__content brad--1 bg--white relative flex flex-col">
+          <header class="p2 tr">
+            <button class="cursor-pointer color--black" aria-label="Close">
+              ×
+            </button>
+          </header>
+          <div
+            class="scroll-y modal__body"
+            data-img-class="w-contained h-contained h-auto fit--contain p2 mb2"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" defer src="./js/main.js"></script>
+
+    <!-- <script src="./node_modules/pjax/pjax.js"></script> -->
+    <script type="module" defer src="./js/pjax@2.4.0.min.js"></script>
+    <script type="module" defer src="./js/storefront.js"></script>
+  </body>
+</html>
