@@ -30,7 +30,7 @@
         id="menu__bar"
         class="color--cotton bg--black flex flex-row md:flex-col justify-between items-center md:pb3"
       >
-        <a href="/" class="hidden md:block"
+        <a href="index.html" class="hidden md:block"
           ><img
             src="./img/desktop/logo-red-en.jpg"
             alt="Окраса"
@@ -75,7 +75,7 @@
             <use href="./img/icons.svg#icon-menu-hamburger"></use>
           </svg> -->
         </div>
-        <a href="/" class="md:hidden"
+        <a href="index.html" class="md:hidden"
           ><img
             src="./img/desktop/logo-white.jpg"
             alt="Окраса"
@@ -260,7 +260,7 @@
                       const elements =
                         content.querySelectorAll("[data-scroller]");
                       elements.forEach((el) => {
-                        const parts = el.dataset.scroller.split("/");
+                        const parts = el.dataset.scroller.split("index.html");
                         el._scrollTriggerStart = parseFloat(parts[0]);
                         el._scrollTriggerEnd = parseFloat(parts[1]);
                       });
