@@ -56,21 +56,6 @@ function menuInit() {
       !(event.cart && event.cart.lineItems.edges.length > 0)
     );
   });
-
-  document.addEventListener(
-    "pjax:success",
-    function () {
-      checkoutFetch().then((checkout) => {
-        const event = new Event("cart:updated", {
-          bubbles: true,
-          cancelable: true,
-        });
-        event.cart = checkout;
-        document.dispatchEvent(event);
-      });
-    },
-    { once: true }
-  );
 }
 
 document.addEventListener("DOMContentLoaded", menuInit, { once: true });

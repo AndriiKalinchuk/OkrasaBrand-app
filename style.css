@@ -755,58 +755,6 @@ svg {
   }
 }
 
-/* Montserrat Regular */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local(""), url("fonts/SangBleuSunrise-Regular-WebS.woff2") format("woff2"), url("fonts/SangBleuSunrise-Regular-WebS.woff") format("woff");
-}
-
-/* Montserrat Regular Italic */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: local(""), url("fonts/SangBleuSunrise-RegularItalic-WebS.woff2") format("woff2"), url("fonts/SangBleuSunrise-RegularItalic-WebS.woff") format("woff");
-}
-
-/* Montserrat */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local(""), url("fonts/GT-America-Standard-Light.woff2") format("woff2"), url("fonts/GT-America-Standard-Light.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local(""), url("fonts/GT-America-Standard-Regular.woff2") format("woff2"), url("fonts/GT-America-Standard-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local(""), url("fonts/GT-America-Standard-Medium.woff2") format("woff2"), url("fonts/GT-America-Standard-Medium.woff") format("woff");
-}
-
-/* Noto Sans Sinhala */
-@font-face {
-  font-family: 'Noto Sans Sinhala';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local(""), url("fonts/noto-sans-sinhala-regular.woff2") format("woff2"), url("fonts/noto-sans-sinhala-regular.woff") format("woff");
-}
-
 .aboutHero__image {
   height: auto;
   order: 2;
