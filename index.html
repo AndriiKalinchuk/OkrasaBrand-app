@@ -29,7 +29,7 @@
         id="menu__bar"
         class="color--cotton bg--black flex flex-row md:flex-col justify-between items-center md:pb3"
       >
-        <a href="/" class="hidden md:block"
+        <a href="index.html" class="hidden md:block"
           ><img
             src="./img/desktop/logo-red-en.jpg"
             alt="Окраса"
@@ -74,7 +74,7 @@
             <use href="./img/icons.svg#icon-menu-hamburger"></use>
           </svg> -->
         </div>
-        <a href="/" class="md:hidden"
+        <a href="index.html" class="md:hidden"
           ><img
             src="./img/desktop/logo-white.jpg"
             alt="Окраса"
@@ -889,7 +889,9 @@
                   <h2 class="h5 mb4">
                     Окраса, яка тобі личить<br />та привертає увагу.
                   </h2>
-                  <a href="/products" class="text-center font-cta-sm underline"
+                  <a
+                    href="products.html"
+                    class="text-center font-cta-sm underline"
                     >Придбай свою прикрасу</a
                   >
                 </div>
@@ -1236,7 +1238,7 @@
                     <div
                       class="pressQuotes__quote content contentgrid absolute w-full t0 l0 r0 b0"
                       style="
-                        transform: translateX(0%);
+                        transform: translateX(-100%);
                         opacity: 1;
                         transition: transform 0.8s
                             cubic-bezier(0.65, 0, 0.55, 1) 0s,
@@ -1310,7 +1312,7 @@
                         width="326"
                         height="60"
                         alt="The Good Trade"
-                        style="object-position: 50% 50%; opacity: 1"
+                        style="object-position: 50% 50%; opacity: 0.4"
                         class="pressQuotes__navLogo w-full h-auto cursor-pointer"
                         data-index="3"
                       />
@@ -1447,7 +1449,7 @@
                     </div>
                     <div class="lg:mt7" data-animate="slide-up delay-4">
                       <a
-                        href="/about"
+                        href="about.html"
                         class="button button--primary font-cta-lg"
                         >Про нас</a
                       >
@@ -1684,7 +1686,7 @@
           </section>
         </main>
         <footer>
-          <a href="/shipping-and-returns">
+          <a href="shipping-and-returns.html">
             <div
               class="marquee marquee--linked block overflow-h color--white bg--black bb1--gray1"
             >
@@ -1876,20 +1878,20 @@
                   </form>
                 </div>
                 <nav class="footerGrid__nav mb8 lg:mb0">
-                  <a class="mb3 md:mb0 lg:mr3" href="/products">Магазин</a>
-                  <a class="mb3 md:mb0 lg:mr3" href="/about">Про нас</a>
-                  <a class="mb3 md:mb0 lg:mr3" href="/shipping-and-returns"
+                  <a class="mb3 md:mb0 lg:mr3" href="products.html">Магазин</a>
+                  <a class="mb3 md:mb0 lg:mr3" href="about.html">Про нас</a>
+                  <a class="mb3 md:mb0 lg:mr3" href="shipping-and-returns.html"
                     >Доставка і повернення</a
                   >
                   <a
                     class="mb3 md:mb0 lg:mr3 footerNav__link flex items-center"
-                    href="/contacts"
+                    href="contacts.html"
                     ><span>Контакти</span></a
                   >
-                  <a class="mb3 md:mb0 lg:mr3" href="/privacy-policy"
+                  <a class="mb3 md:mb0 lg:mr3" href="privacy-policy.html"
                     >Конфіденційнійсть</a
                   >
-                  <a class="mb3 md:mb0 lg:mr3" href="/terms-of-service"
+                  <a class="mb3 md:mb0 lg:mr3" href="terms-of-service.html"
                     >Умови користування</a
                   >
                 </nav>
@@ -1945,6 +1947,6 @@
     </div>
     <script type="module" defer src="./js/main.js"></script>
     <script type="module" defer src="./js/storefront.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@sliphua/pjax@latest/dist/pjax.min.js"></script>
+    <script src="/node_modules/@sliphua/pjax/dist/pjax.min.js"></script>
   </body>
 </html>

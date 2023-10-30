@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
@@ -259,7 +259,7 @@
                       const elements =
                         content.querySelectorAll("[data-scroller]");
                       elements.forEach((el) => {
-                        const parts = el.dataset.scroller.split("index.html");
+                        const parts = el.dataset.scroller.split("/");
                         el._scrollTriggerStart = parseFloat(parts[0]);
                         el._scrollTriggerEnd = parseFloat(parts[1]);
                       });
@@ -408,25 +408,25 @@
                       class="storyScroller__line mb3"
                       data-scroller="0/0.14285714285714285"
                     >
-                      Запалює фарби життя.
+                      Ручною роботою майстра
                     </h3>
                     <h3
                       class="storyScroller__line mb3"
                       data-scroller="0.14285714285714285/0.2857142857142857"
                     >
-                      Тобі личить окраса.
+                     з найкращих матеріалів
                     </h3>
                     <h3
                       class="storyScroller__line mb3"
                       data-scroller="0.2857142857142857/0.42857142857142855"
                     >
-                      Акцент твого образу.
+                     створено унікальні деталі
                     </h3>
                     <h3
                       class="storyScroller__line mb3"
                       data-scroller="0.42857142857142855/0.5714285714285714"
                     >
-                      Твоя особиста прикраса.
+                     довершеного вигляду.
                     </h3>
                     <h3
                       class="storyScroller__line mb3"
@@ -730,6 +730,6 @@
     </div>
     <script type="module" defer src="./js/main.js"></script>
     <script type="module" defer src="./js/storefront.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@sliphua/pjax@latest/dist/pjax.min.js"></script>
+    <script src="/node_modules/@sliphua/pjax/dist/pjax.min.js"></script>
   </body>
 </html>
