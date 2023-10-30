@@ -29,7 +29,7 @@
         id="menu__bar"
         class="color--cotton bg--black flex flex-row md:flex-col justify-between items-center md:pb3"
       >
-        <a href="index.html" class="hidden md:block"
+        <a href="/" class="hidden md:block"
           ><img
             src="./img/desktop/logo-red-en.jpg"
             alt="Окраса"
@@ -74,7 +74,7 @@
             <use href="./img/icons.svg#icon-menu-hamburger"></use>
           </svg> -->
         </div>
-        <a href="index.html" class="md:hidden"
+        <a href="/" class="md:hidden"
           ><img
             src="./img/desktop/logo-white.jpg"
             alt="Окраса"
@@ -120,21 +120,20 @@
         class="color--cotton bg--black h-full flex flex-col lg:justify-between scroll-y"
       >
         <ul class="font-menu-lg" style="flex-grow: 4">
-          <li class="mb3"><a href="products.html">Магазин</a></li>
-          <li class="mb3"><a href="about.html">Про нас</a></li>
-          <!-- <li class="mb3"><a href="/gallery">Галерея</a></li> -->
+          <li class="mb3"><a href="/products">Магазин</a></li>
+          <li class="mb3"><a href="/about">Про нас</a></li>
         </ul>
         <ul class="font-menu-sm mt5 mb5" style="flex-grow: 1">
-          <li class="mb3"><a href="production.html">How it's made</a></li>
+          <li class="mb3"><a href="/production">How it's made</a></li>
           <li class="mb3">
-            <a href="shipping-and-returns.html">Доставка і повернення</a>
+            <a href="/shipping-and-returns">Доставка і повернення</a>
           </li>
           <li class="mb3">
-            <a href="common-questions.html">Загальні питання</a>
+            <a href="/common-questions">Загальні питання</a>
           </li>
 
           <li class="mb3">
-            <a href="contacts.html" class="flex items-center nav__link"
+            <a href="/contacts" class="flex items-center nav__link"
               ><span>Контакти</span></a
             >
           </li>
@@ -256,13 +255,13 @@
                   class="mb9 col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-15 lg:col-span-9"
                 >
                   <div class="inline-flex flex-col">
-                    <a href="mailto: elena@gmail.com">
+                    <a href="mailto: O.krasabrand@gmail.com">
                       <div
                         class="font-cta-sm text-center contactButton--black mb2"
                       >
                         <span class="mr2">Email</span>
                         <span class="mr2">/</span>
-                        <span>elena@gmail.com</span>
+                        <span>O.krasabrand@gmail.com</span>
                       </div>
                     </a>
                     <a href="tel:312.626.9680">
@@ -295,7 +294,7 @@
           </div>
         </main>
         <footer>
-          <a href="shipping-and-returns.html">
+          <a href="/shipping-and-returns">
             <div
               class="marquee marquee--linked block overflow-h color--white bg--black bb1--gray1"
             >
@@ -487,21 +486,20 @@
                   </form>
                 </div>
                 <nav class="footerGrid__nav mb8 lg:mb0">
-                  <a class="mb3 md:mb0 lg:mr3" href="products.html">Магазин</a>
-                  <a class="mb3 md:mb0 lg:mr3" href="about.html">Про нас</a>
-                  <!-- <a class="mb3 md:mb0 lg:mr3" href="/gallery">Галерея</a> -->
-                  <a class="mb3 md:mb0 lg:mr3" href="shipping-and-returns.html"
+                  <a class="mb3 md:mb0 lg:mr3" href="/products">Магазин</a>
+                  <a class="mb3 md:mb0 lg:mr3" href="/about">Про нас</a>
+                  <a class="mb3 md:mb0 lg:mr3" href="/shipping-and-returns"
                     >Доставка і повернення</a
                   >
                   <a
                     class="mb3 md:mb0 lg:mr3 footerNav__link flex items-center"
-                    href="contacts.html"
+                    href="/contacts"
                     ><span>Контакти</span></a
                   >
-                  <a class="mb3 md:mb0 lg:mr3" href="privacy-policy.html"
+                  <a class="mb3 md:mb0 lg:mr3" href="/privacy-policy"
                     >Конфіденційнійсть</a
                   >
-                  <a class="mb3 md:mb0 lg:mr3" href="terms-of-service.html"
+                  <a class="mb3 md:mb0 lg:mr3" href="/terms-of-service"
                     >Умови користування</a
                   >
                 </nav>
@@ -557,7 +555,7 @@
     </div>
     <script type="module" defer src="./js/main.js"></script>
     <script type="module" defer src="./js/pjax@2.4.0.min.js"></script>
-    <!-- <script src="./node_modules/pjax/pjax.js"></script> -->
+    <script src="./node_modules/@sliphua/pjax/dist/pjax.min.js"></script>
     <script type="module" defer src="./js/storefront.js"></script>
   </body>
 </html>
