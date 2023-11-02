@@ -70,9 +70,6 @@
               stroke-width="1.5"
             ></line>
           </svg>
-          <!-- <svg class="burger-icon" width="32" height="32">
-            <use href="./img/icons.svg#icon-menu-hamburger"></use>
-          </svg> -->
         </div>
         <a href="index.html" class="md:hidden"
           ><img
@@ -1719,164 +1716,6 @@
               <div
                 class="footerGrid col-start-1 col-span-12 md:col-start-2 md:col-span-22"
               >
-                <div class="footerGrid__emailForm mb8 lg:mb0">
-                  <h2 class="font-body-lg mb4">
-                    Підписатися на новини та персональні пропозиції
-                  </h2>
-                  <script>
-                    function handleNewsletterSubmit(event) {
-                      event.preventDefault();
-                      const input = event.target.querySelector(
-                        'input[type="email"]'
-                      );
-                      const group =
-                        event.target.querySelector('input[name="g"]');
-                      const button = event.target.querySelector("button");
-                      const submit = button.querySelector(
-                        ".newsletter__submit"
-                      );
-                      const processing = button.querySelector(
-                        ".newsletter__processing"
-                      );
-                      const success = button.querySelector(
-                        ".newsletter__success"
-                      );
-
-                      function onError() {
-                        alert(
-                          "There was an error with your signup. Please try again later."
-                        );
-                        input.disabled = false;
-                        button.disabled = false;
-                        processing.classList.add("hidden");
-                        submit.classList.remove("hidden");
-                      }
-
-                      input.disabled = true;
-                      button.disabled = true;
-                      submit.classList.add("hidden");
-                      processing.classList.remove("hidden");
-
-                      // --- Tracking --- //
-                      window.dataLayer.push({
-                        event: "emailSubmit",
-                        email: input.value,
-                        group: group.value,
-                        timezoneOffset: new Date().getTimezoneOffset(),
-                      });
-                      // --- Tracking --- //
-
-                      fetch(event.target.dataset.ajaxAction, {
-                        method: "POST",
-                        headers: {
-                          "Access-Control-Allow-Headers": "*",
-                          "Content-Type":
-                            "application/x-www-form-urlencoded; charset=utf-8",
-                        },
-                        body: new URLSearchParams({
-                          email: input.value,
-                          g: group.value,
-                          $timezone_offset: new Date().getTimezoneOffset(),
-                        }),
-                        cache: "no-store",
-                      })
-                        .then(function (resp) {
-                          if (!resp.ok) throw new Error(resp);
-                          return resp.json();
-                        })
-                        .then(function (resp) {
-                          if (!resp.success) throw new Error(resp);
-
-                          processing.classList.add("hidden");
-                          success.classList.remove("hidden");
-                          button.classList.remove("opacity--disabled");
-                        })
-                        .catch(function (e) {
-                          onError();
-                        });
-                    }
-                  </script>
-                  <form
-                    class="flex flex-row color--white font-body-lg"
-                    method="GET"
-                    action="https://manage.kmail-lists.com/subscriptions/subscribe"
-                    data-ajax-action="https://manage.kmail-lists.com/ajax/subscriptions/subscribe"
-                    onsubmit="handleNewsletterSubmit(event);"
-                  >
-                    <input type="hidden" name="g" value="RePdxG" />
-                    <input
-                      class="grow p2 opacity--disabled"
-                      type="email"
-                      placeholder="Email address"
-                      name="email"
-                      autocomplete="off"
-                    />
-                    <button
-                      aria-label="submit"
-                      class="p2 cursor-pointer color--white flex items-center justify-center opacity--disabled"
-                    >
-                      <span class="newsletter__submit"
-                        ><svg
-                          width="15"
-                          height="12"
-                          viewBox="0 0 15 12"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </span>
-                      <span class="newsletter__processing hidden"
-                        ><svg
-                          width="19"
-                          height="3"
-                          viewBox="0 0 19 3"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            cx="9.5"
-                            cy="1.5"
-                            r="1.5"
-                            fill="currentColor"
-                          ></circle>
-                          <circle
-                            cx="17.5"
-                            cy="1.5"
-                            r="1.5"
-                            fill="currentColor"
-                          ></circle>
-                          <circle
-                            cx="1.5"
-                            cy="1.5"
-                            r="1.5"
-                            fill="currentColor"
-                          ></circle>
-                        </svg>
-                      </span>
-                      <span class="newsletter__success hidden"
-                        ><svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.34615 8.5L5.84627 13L15.0001 4"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
-                      </span>
-                    </button>
-                  </form>
-                </div>
                 <nav class="footerGrid__nav mb8 lg:mb0">
                   <a class="mb3 md:mb0 lg:mr3" href="products.html">Магазин</a>
                   <a class="mb3 md:mb0 lg:mr3" href="about.html">Про нас</a>
@@ -1925,28 +1764,7 @@
         </footer>
       </div>
     </div>
-    <div id="bodyTail">
-      <div
-        id="lightbox"
-        class="modal flex items-center justify-center fixed t0 l0 r0 b0"
-        style="display: none"
-      >
-        <div class="modal__background absolute t0 l0 r0 b0"></div>
-        <div class="modal__content brad--1 bg--white relative flex flex-col">
-          <header class="p2 tr">
-            <button class="cursor-pointer color--black" aria-label="Close">
-              ×
-            </button>
-          </header>
-          <div
-            class="scroll-y modal__body"
-            data-img-class="w-contained h-contained h-auto fit--contain p2 mb2"
-          ></div>
-        </div>
-      </div>
-    </div>
     <script type="module" defer src="./js/main.js"></script>
-    <script type="module" defer src="./js/storefront.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@sliphua/pjax@latest/dist/pjax.min.js"></script>
   </body>
 </html>
