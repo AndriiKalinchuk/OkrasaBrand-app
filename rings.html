@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OkrasaBrand - shipping and returns</title>
+    <title>OkrasaBrand - products/rings</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -23,6 +23,7 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body class="bg--cotton">
     <div id="menu">
       <div
@@ -31,7 +32,7 @@
       >
         <a href="index.html" class="hidden md:block"
           ><img
-            src="./img/desktop/logo-red-en.jpg"
+            src="./img/desktop/logo-white.jpg"
             alt="Окраса"
             class="w-full h-auto"
             width="161"
@@ -179,7 +180,7 @@
       </button>
 
       <div class="featuredProductTags__tags flex flex-row">
-                <a
+        <a
           href="earrings.html"
           class="button button--small font-cta-sm"
           onclick="this.parentElement.classList.remove('featuredProductTags--open');"
@@ -230,157 +231,234 @@
       })();
     </script>
 
+    <script>
+      "use strict";
+      (function () {
+        let observer;
+        document.addEventListener("pjax:success", function () {
+          const hero = document.querySelector(".homeHero");
+          if (!hero) return;
+
+          const tags = document.querySelector(".featuredProductTags");
+          if (observer) observer.disconnect();
+          observer = new IntersectionObserver(function (entries) {
+            for (const entry of entries) {
+              tags.classList.toggle(
+                "featuredProductTags--forceOpen",
+                entry.isIntersecting
+              );
+            }
+          });
+
+          observer.observe(hero);
+        });
+      })();
+    </script>
+
     <div id="body__contentWrapper">
       <div id="body__content">
         <main>
-          <div class="bg--sunset2 color--cotton">
-            <div class="helpPage content contentgrid relative pt6 md:pt0">
-              <section
-                class="col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-2 lg:col-span-10 md:mt9"
-                style="min-width: 0"
-              >
-                <h1 id="shipping-and-returns" class="h2 mb6">
-                  Доставка і повернення
-                </h1>
-              </section>
-              <div
-                class="lg:mt10 font-body-lg col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-15 lg:col-span-8"
-              >
-                <div class="mb9 lg:mb10 lg:mt9">
-                  <div class="helpPage__description richtext">
-                    <p>
-                      Кожний виріб ми дбало запакуємо щоб уникнути пошкоджень
-                      під час доставки. 
-                    </p>
-                    <p>
-                      Нижче наводимо правила доставки і повернення виробів,
-                      задля забезпечення належного сервісу. Ви можете завжди
-                      <a href="contacts.html" title="">звернутися до нас</a>
-                      якщо у Вас залишились питання.
-                    </p>
-                  </div>
-                </div>
-
-                <section id="shipping" class="mb8">
-                  <h2 class="h6 mt4 mb4 pt4 bt1--white">Доставка</h2>
-                  <div class="mb4">
-                    <div class="richtext">
-                      <p>
-                        Зазвичай ми доставляємо вироби в межах України (за
-                        виключенням непідконтрольних територій) через Нову Пошту
-                        або Укпошту на Ваш вибір. Вартість доставки сплачується
-                        покупцем. 
-                      </p>
-                      <p>
-                        Інші способи доставки, а також доставка за кордон (за
-                        виключенням рф, рб і тп), можливі за окремим
-                        погодженням.
-                      </p>
-                      <p>
-                        Готові вироби передаються на службу доставки протягом
-                        1-2 днів.
-                      </p>
-                      <p>Строк доставки визначається відповідною службою.</p>
-                      <p>
-                        <a
-                          href="https://novaposhta.ua/"
-                          target="_blank"
-                          title=""
-                          >Нова пошта</a
-                        >
-                      </p>
-                      <p>
-                        <a
-                          href="https://ukrposhta.ua/ua"
-                          target="_blank"
-                          title=""
-                          >Укрпошта</a
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </section>
-                <section id="returns" class="mb8">
-                  <h2 class="h6 mt4 mb4 pt4 bt1--white">Повернення</h2>
-                  <div class="mb4">
-                    <div class="richtext">
-                      <p>
-                        Всі необхідні деталі погоджуються з покупцем перед
-                        відправкою виробу. Оскільки всі без виключення вироби
-                        ручної роботи, можливі незначні відмінності готового
-                        виробу від зображення, розміщеного на сайті. "Живе" фото
-                        готового виробу буде надіслано покупцеві перед
-                        відправкою.
-                      </p>
-                      <p>
-                        Якщо отриманий виріб не відповідає погодженим деталям,
-                        не відповідає "живому" фото або пошкоджений при
-                        доставці, покупцю необхідно одразу
-                        <a href="contacts.html" title="">звернутися до нас</a> і
-                        надати відповідні підтвердження. Запевняємо, ми знайдемо
-                        прийнятний варіант щоб покупець залишився задоволеним.
-                      </p>
-                      <p>
-                        Для уникнення непорозумінь звертаємо Вашу увагу, що
-                        згідно Постанови КМУ від 19 березня 1994 р. N 172 "Про
-                        реалізацію окремих положень Закону України "Про захист
-                        прав споживачів", ювелірні вироби з дорогоцінних
-                        металів, дорогоцінного каміння, дорогоцінного каміння
-                        органогенного утворення та напівдорогоцінного каміння
-                        включено до переліку товарів належної якості, що не
-                        підлягають обміну (поверненню).
-                      </p>
-                    </div>
-                  </div>
-                </section>
-              </div>
-
-              <ol
-                class="helpPage__anchorBlock hidden lg:block font-body-md mt4 mb4 sticky col-start-1 col-span-12 md:col-start-2 md:col-span-24 lg:col-start-2 lg:col-span-10"
-              >
-                <li class="mb2 helpPage__anchorLink underline">
-                  <a href="#shipping-and-returns">Загальне</a>
-                </li>
-                <li class="mb2 helpPage__anchorLink underline">
-                  <a href="#shipping">Доставка</a>
-                </li>
-                <li class="mb2 helpPage__anchorLink underline">
-                  <a href="#returns">Повернення</a>
-                </li>
-              </ol>
-            </div>
-          </div>
-
           <script>
             "use strict";
             (function () {
-              let observer;
-              document.addEventListener("pjax:success", function () {
-                const sections = document.querySelectorAll(
-                  ".helpPage section[id], .helpPage h1[id]"
-                );
-                if (observer) observer.disconnect();
-                observer = new IntersectionObserver(function (entries) {
-                  for (const entry of entries) {
-                    const id = entry.target.getAttribute("id");
-                    const anchorLink = document.querySelector(
-                      `.helpPage__anchorLink [href="#${id}"]`
-                    );
-                    if (anchorLink) {
-                      anchorLink.parentElement.classList.toggle(
-                        "helpPage__anchorLink--active",
-                        entry.isIntersecting
+              document.addEventListener(
+                "pjax:success",
+                function () {
+                  const hoverText = document.querySelector(
+                    ".productLinkHoverText"
+                  );
+                  const onMouseMove = function (event) {
+                    hoverText.style.top = `${event.pageY}px`;
+                    if (
+                      event.pageX + hoverText.clientWidth >
+                      window.innerWidth
+                    ) {
+                      hoverText.classList.add("productLinkHoverText--reverse");
+                      hoverText.style.right = `${
+                        window.innerWidth - event.pageX
+                      }px`;
+                      hoverText.style.left = "unset";
+                    } else {
+                      hoverText.classList.remove(
+                        "productLinkHoverText--reverse"
                       );
+                      hoverText.style.left = `${event.pageX}px`;
+                      hoverText.style.right = "unset";
                     }
-                  }
-                });
+                  };
 
-                sections.forEach((sec) => {
-                  observer.observe(sec);
-                });
-              });
+                  window.addEventListener("mousemove", onMouseMove);
+                  let hoverTransition;
+                  document.querySelectorAll(".productLink").forEach((el) => {
+                    el.addEventListener("mouseenter", function (event) {
+                      clearTimeout(hoverTransition);
+                      hoverText.style.opacity = 1;
+                      hoverText.style.display = "flex";
+                    });
+                    el.addEventListener("mouseleave", function (event) {
+                      hoverText.style.opacity = 0;
+                      hoverTransition = setTimeout(function () {
+                        hoverText.style.display = "none";
+                      }, 200);
+                    });
+                  });
+
+                  document.addEventListener(
+                    "pjax:send",
+                    function () {
+                      window.removeEventListener("mousemove", onMouseMove);
+                    },
+                    { once: true }
+                  );
+                },
+                { once: true }
+              );
             })();
           </script>
+
+          <div class="content contentgrid mt7 lg:mt9">
+            <header
+              class="animation-container col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-2 lg:col-span-6 mb6"
+            >
+              <h1 class="h3 mb6" data-animate="slide-up delay-1">
+                Краса у кожній деталі
+              </h1>
+              <div
+                class="font-body-lg font-weight-lt"
+                data-animate="slide-up delay-2"
+              ></div>
+            </header>
+
+            <section
+              class="animation-container productIndex__products col-start-1 col-span-12 md:col-start-2 md:col-span-22 lg:col-start-10 lg:col-span-14"
+            >
+              <a
+                href="rings.html"
+                class="productIndex__product flex flex-col mb6 lg:mb8"
+                data-animate="slide-up delay-4 md:delay-5"
+                data-product-id="6850936602702"
+                data-variant-id="40162398634062"
+              >
+                <div
+                  class="productLink relative overflow-h w-full"
+                  style="aspect-ratio: 1"
+                >
+                  <img
+                    class="w-contained w-full h-full fit--cover rounded"
+                    src="./img/desktop/ring.jpg"
+                    width="541"
+                    height="640"
+                    alt=""
+                    style="object-position: 50% 50%"
+                    srcset="
+                      ./img/desktop/ring.jpg 1280w,
+                      ./img/desktop/ring.jpg  640w
+                    "
+                    sizes="(min-width: 768px) 50vw,
+					100vw"
+                  />
+                  <img
+                    class="w-contained w-full h-full fit--cover rounded"
+                    src="./img/dove1.jpg"
+                    width="541"
+                    height="640"
+                    alt=""
+                    style="object-position: 50% 50%"
+                    srcset="./img/dove1.jpg 1280w, ./img/dove1.jpg 640w"
+                    sizes="(min-width: 768px) 50vw,
+					100vw"
+                  />
+                </div>
+                <div
+                  class="flex flex-row justify-between items-center bb1--gray3 pt3 pb3"
+                >
+                  <h2 class="h7">Кільця</h2>
+                  <span class="eyebrow-sm">від 350 грн</span>
+                </div>
+                <div class="grow flex flex-row items-center bb1--gray3 pt3 pb3">
+                  <p class="font-body-md font-weight-lt mr2">
+                    Любов подібна до кільця, де ні початку, ні кінця.
+                  </p>
+                  <span style="flex-shrink: 0"
+                    ><svg
+                      width="15"
+                      height="12"
+                      viewBox="0 0 15 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.5303 6.53033C14.8232 6.23744 14.8232 5.76256 14.5303 5.46967L9.75736 0.696699C9.46447 0.403806 8.98959 0.403806 8.6967 0.696699C8.40381 0.989592 8.40381 1.46447 8.6967 1.75736L12.9393 6L8.6967 10.2426C8.40381 10.5355 8.40381 11.0104 8.6967 11.3033C8.98959 11.5962 9.46447 11.5962 9.75736 11.3033L14.5303 6.53033ZM14 5.25L2.98023e-07 5.25V6.75L14 6.75V5.25Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </section>
+          </div>
+
+          <script>
+            document.addEventListener(
+              "tracking:pageInit",
+              function () {
+                try {
+                  const product_ids = [];
+                  document
+                    .querySelectorAll(".productIndex__product")
+                    .forEach(function (el) {
+                      product_ids.push({
+                        product: parseInt(el.dataset.productId),
+                        variant: parseInt(el.dataset.variantId),
+                      });
+                    });
+                  const impressions = product_ids.map(function (ids, i) {
+                    return track__buildImpression(
+                      ids.product.toString(),
+                      ids.variant.toString(),
+                      i + 1,
+                      undefined,
+                      window.location.pathname
+                    );
+                  });
+                  track_collectionView(impressions);
+                } catch (e) {
+                  console.error(e);
+                }
+              },
+              { once: true }
+            );
+
+            document.addEventListener(
+              "pjax:success",
+              function () {
+                try {
+                  document
+                    .querySelectorAll(".productIndex__product")
+                    .forEach(function (el, i) {
+                      const p_id = parseInt(el.dataset.productId);
+                      const v_id = parseInt(el.dataset.variantId);
+                      el.addEventListener("click", function (e) {
+                        const prod = track__buildProduct(
+                          p_id.toString(),
+                          v_id.toString(),
+                          undefined,
+                          i
+                        );
+                        track_productClick(prod);
+                      });
+                    });
+                } catch (e) {
+                  console.error(e);
+                }
+              },
+              { once: true }
+            );
+          </script>
+
+          <div class="productLinkHoverText eyebrow-sm absolute">
+            View Product
+          </div>
         </main>
         <footer>
           <a href="shipping-and-returns.html">
